@@ -678,7 +678,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">Before</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/signature-before.png"
+                        src="/img/case-studies/signature-web-before.png"
                         alt="Signature page before redesign"
                       />
                     </div>
