@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import "./Nav.css";
 
 const NAV_LINKS = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", anchor: "work" },
+  { label: "About", anchor: "about" },
+  { label: "Contact", anchor: "contact" },
 ];
 
 function Nav() {
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+
+  const linkHref = (anchor) => (isHome ? `#${anchor}` : `/#${anchor}`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,39 +43,41 @@ function Nav() {
       aria-label="Main navigation"
     >
       <div className="nav-inner">
-        <a href="#" className="nav-logo">
+        <a href="/" className="nav-logo">
           Sophia Ling
         </a>
 
         <ul className="nav-links" role="list">
-          {NAV_LINKS.map(({ label, href }) => (
-            <li key={href}>
-              <a href={href} className="nav-link">
+          {NAV_LINKS.map(({ label, anchor }) => (
+            <li key={anchor}>
+              <a href={linkHref(anchor)} className="nav-link">
                 {label}
               </a>
             </li>
           ))}
         </ul>
 
-        <button
-          className="nav-theme-toggle"
-          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          onClick={toggleTheme}
-        >
-          {isDark ? "☀" : "☽"}
-        </button>
+        <div className="nav-actions">
+          <button
+            className="nav-theme-toggle"
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            onClick={toggleTheme}
+          >
+            {isDark ? "☀" : "☽"}
+          </button>
 
-        <button
-          className="nav-hamburger"
-          aria-label="Toggle menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="nav-overlay"
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-        >
-          <span className="nav-hamburger-line" aria-hidden="true" />
-          <span className="nav-hamburger-line" aria-hidden="true" />
-          <span className="nav-hamburger-line" aria-hidden="true" />
-        </button>
+          <button
+            className="nav-hamburger"
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="nav-overlay"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <span className="nav-hamburger-line" aria-hidden="true" />
+            <span className="nav-hamburger-line" aria-hidden="true" />
+            <span className="nav-hamburger-line" aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
       <div
@@ -78,10 +85,17 @@ function Nav() {
         className={`nav-overlay${isMenuOpen ? " nav-overlay--open" : ""}`}
         aria-hidden={!isMenuOpen}
       >
+        <button
+          className="nav-overlay-close"
+          aria-label="Close menu"
+          onClick={closeMenu}
+        >
+          ✕
+        </button>
         <ul className="nav-overlay-links" role="list">
-          {NAV_LINKS.map(({ label, href }) => (
-            <li key={href}>
-              <a href={href} className="nav-overlay-link" onClick={closeMenu}>
+          {NAV_LINKS.map(({ label, anchor }) => (
+            <li key={anchor}>
+              <a href={linkHref(anchor)} className="nav-overlay-link" onClick={closeMenu}>
                 {label}
               </a>
             </li>

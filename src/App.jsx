@@ -1,18 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Cursor from "./components/Cursor";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import CaseStudies from "./components/CaseStudies";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function Portfolio() {
   return (
     <>
-      <Nav />
       <main>
         <Hero />
         <CaseStudies />
@@ -27,7 +35,9 @@ function Portfolio() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Cursor />
+      <Nav />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/case-studies/consulta" element={<CaseStudy />} />
