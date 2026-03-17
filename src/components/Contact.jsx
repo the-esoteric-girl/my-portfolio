@@ -26,7 +26,9 @@ export default function Contact() {
         setSubmitted(true);
         setError("");
       } else {
-        setError("Something went wrong. Please try again or email me directly.");
+        setError(
+          "Something went wrong. Please try again or email me directly.",
+        );
       }
     } catch {
       setError("Network error. Please try again or email me directly.");
@@ -38,7 +40,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-header">
           <h2>Contact</h2>
-          <Label variant="counter">[ Get In Touch ]</Label>
+          <Label variant="counter">[ 03 Get In Touch ]</Label>
         </div>
         <div className="contact-grid">
           <div className="contact-left">

@@ -46,6 +46,8 @@ function Hero() {
           variant="footer"
           as="a"
           href="https://linkedin.com/in/sophia-x-ling"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           LinkedIn ↗
         </Label>
@@ -53,6 +55,8 @@ function Hero() {
           variant="footer"
           as="a"
           href="https://github.com/the-esoteric-girl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           GitHub ↗
         </Label>

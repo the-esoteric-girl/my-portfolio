@@ -99,6 +99,20 @@ Usage examples:
 - Use Lorem ipsum — ask for real content instead
 - Write button styles outside Button.css
 
+## Link rules
+
+External links (opening new tab):
+- Always color: var(--color-accent)
+- Always append ↗ symbol
+- Always target="_blank" rel="noopener noreferrer"
+- Hover: text-decoration underline, text-underline-offset 3px
+- Font: inherit from parent — never override font-family on links
+
+Internal anchor links (same page scroll):
+- Color: var(--color-text-primary) by default
+- Active/current: var(--color-accent)
+- Never use ↗ on internal links
+
 ## Commits
 
 feat: / fix: / style: / chore:

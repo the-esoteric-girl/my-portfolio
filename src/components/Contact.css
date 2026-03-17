@@ -76,7 +76,7 @@
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-text-primary);
+  color: var(--color-accent);
   transition: color var(--duration-fast) var(--ease-out);
 }
 
@@ -85,11 +85,13 @@
 }
 
 .contact-link span {
-  color: var(--color-accent);
+  color: var(--color-text-muted);
+  font-size: 9px;
 }
 
 .contact-link:hover {
-  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ── Right column ─────────────────────────────────────────────── */

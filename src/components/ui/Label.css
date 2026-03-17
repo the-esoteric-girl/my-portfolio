@@ -68,6 +68,15 @@
   color: var(--color-text-muted);
 }
 
+a.label--footer {
+  color: var(--color-accent);
+}
+
+a.label--footer:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .label--nav {
   font-size: var(--text-sm);
   color: var(--color-text-primary);

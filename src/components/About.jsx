@@ -59,13 +59,13 @@ function About() {
                 <span className="about-link-arrow">↗</span>
               </a>
               <a className="about-link" href="https://linkedin.com/in/sophia-x-ling"
-                 target="_blank" rel="noopener">
+                 target="_blank" rel="noopener noreferrer">
                 <span className="about-link-label">LinkedIn</span>
                 <span className="about-link-value">sophia-x-ling</span>
                 <span className="about-link-arrow">↗</span>
               </a>
               <a className="about-link" href="https://github.com/the-esoteric-girl"
-                 target="_blank" rel="noopener">
+                 target="_blank" rel="noopener noreferrer">
                 <span className="about-link-label">GitHub</span>
                 <span className="about-link-value">the-esoteric-girl</span>
                 <span className="about-link-arrow">↗</span>
