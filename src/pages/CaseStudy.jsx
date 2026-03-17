@@ -176,7 +176,12 @@ export default function CaseStudy() {
       {/* ── Body ─────────────────────────────────────────────── */}
       <div className="cs-body">
         {/* Sidebar TOC */}
-        <aside className="cs-sidebar" aria-label="Table of contents" ref={sidebarRef} onPointerDown={handleTocPointerDown}>
+        <aside
+          className="cs-sidebar"
+          aria-label="Table of contents"
+          ref={sidebarRef}
+          onPointerDown={handleTocPointerDown}
+        >
           <span className="cs-toc-label">Contents</span>
 
           {TOC_ITEMS.map((item) => (
@@ -217,24 +222,23 @@ export default function CaseStudy() {
               A portal that needed to work as hard as the people using it.
             </h2>
             <p>
-              Consulta is an AI-powered platform that helps immigrants navigate
-              US immigration applications — selecting the right form, answering
-              questions, uploading documents, paying fees, and signing
-              submissions. The underlying logic was genuinely useful. The
-              interface around it worked against the user at every turn.
+              Consulta Immigration is an AI-powered legal tech startup helping
+              immigrants navigate the US immigration process. When I joined as
+              the sole designer, their client portal was functional but broken —
+              users were confused, support queues were overloaded, and the
+              product didn't reflect the quality of the legal work happening
+              behind it.
             </p>
             <p>
-              I joined as the sole designer in February 2025 and spent seven
-              months redesigning the product from the inside out. Not a cosmetic
-              refresh — a structural rethink of how Consulta communicates,
-              guides, and reassures people doing something that matters more
-              than almost any software they will ever use.
+              Over seven months I led the full redesign of the portal — from the
+              first screen a user sees to the final signature page. The goal
+              wasn't just making it look better. It was making it work better
+              for people in one of the most stressful situations of their lives.
             </p>
+            <h3 className="cs-sub-heading">Outcomes</h3>
             <p>
-              The work touched every screen in the filing flow: application
-              selection, the AI-powered questionnaire, document collection, fee
-              payment, and signature. It also produced the design system
-              Consulta continues to build on.
+              Support questions dropped. Users reported significantly less
+              confusion.
             </p>
           </section>
 
@@ -252,38 +256,43 @@ export default function CaseStudy() {
               Functional but broken.
             </h2>
             <p>
-              The original portal had been built to prove a product concept, not
-              to serve a user. It demonstrated that the AI could process an
-              immigration case. It could not demonstrate that a real person —
-              someone with limited English, no legal background, and high
-              personal stakes — could complete one.
+              The original portal had fundamental issues that compounded across
+              every screen.
             </p>
             <p>
-              The app selection screen presented all available application types
-              at once, with no hierarchy and no guidance. Users with no
-              immigration background were expected to know which of a dozen
-              forms applied to their situation. Wrong-form selection wasn't
-              hypothetical — it was happening regularly in internal testing.
+              Users weren't confused because the immigration process is complex
+              — they were confused because the product wasn't helping them
+              navigate that complexity. Instructions existed but weren't
+              legible. Steps were present but not sequenced. Actions were
+              available but not prioritized. The interface assumed users would
+              figure it out.
             </p>
             <p>
-              The questionnaire was the core of the product, but it looked like
-              a raw form dump. Questions appeared without context, grouping, or
-              visible progress. The emotional weight of answering detailed
-              questions about immigration history wasn't acknowledged anywhere
-              in the UI.
+              Visual hierarchy was effectively nonexistent. Every element
+              competed equally for attention — headings, body text, CTAs,
+              warnings, optional fields. Nothing was clearly more important than
+              anything else, which meant nothing got noticed when it needed to
+              be.
             </p>
             <p>
-              The document checklist was a flat list of filenames. No grouping,
-              no status indication, no explanation of what any document was or
-              why it was required. Users in testing didn't know if they were
-              close to done or just getting started.
+              Accessibility had clearly never been a consideration. Font sizes
+              were too small, contrast ratios failed basic WCAG standards, and
+              interactive elements were ambiguous. For users already navigating
+              a high-stakes, stressful process, these weren't minor
+              inconveniences — they were barriers.
             </p>
             <p>
-              Throughout all of it, the visual design had no system behind it.
-              Type sizes were inconsistent, spacing was arbitrary, and states —
-              empty, loading, error, success — were either missing or
-              improvised. The product had real capability hidden inside an
-              interface that communicated the opposite.
+              The inconsistency made it worse. Buttons looked different across
+              screens. Spacing was arbitrary. Patterns that appeared one way on
+              one page appeared differently on the next. There was no visual
+              language, no system — just a collection of screens that happened
+              to be part of the same product.
+            </p>
+            <p>
+              The result was a support queue full of preventable questions.
+              Attorneys were spending time on confusion that good design should
+              have resolved. The redesign wasn't about aesthetics. It was about
+              making the product do its actual job.
             </p>
           </section>
 
@@ -301,35 +310,36 @@ export default function CaseStudy() {
               Start with what's known.
             </h2>
             <p>
-              I began with the founders, who had deep domain knowledge from
-              previous immigration-adjacent work. We ran through every screen
-              together — not as a design review, but as a scenario exercise.
-              Walk me through what a user with no immigration experience would
-              think when they land here. Those sessions were the fastest way to
-              surface assumptions baked into the UI that no one had questioned.
+              I didn't have direct access to users. What I had was the next best
+              thing — cofounders who had been fielding support questions since
+              day one and knew exactly where people were getting stuck.
             </p>
             <p>
-              Alongside that I did competitive analysis across legal-tech
-              products serving the immigration space: Boundless, Docketwise,
-              Clio, and several USCIS direct tools. The gap was consistent —
-              most tools were built for immigration attorneys, not for the
-              immigrants themselves. The consumer-facing products that did exist
-              treated complexity as something to hide rather than something to
-              explain, which created a different kind of anxiety.
+              I started by synthesizing that feedback into patterns. The
+              complaints weren't random — they clustered around the same moments
+              in the flow, the same types of confusion, the same missing pieces.
+              That consistency told me the problems were structural, not
+              incidental.
+            </p>
+            <p>
+              I also looked at how comparable platforms handled the same
+              challenges. Boundless, one of the stronger players in the
+              immigration tech space, showed a clear pattern: successful
+              platforms use progressive disclosure to manage complexity,
+              explicit step indicators to reduce orientation anxiety, and
+              unambiguous calls to action at every decision point. None of those
+              things existed in Consulta's portal.
             </p>
             <p>
               Because formal usability testing wasn't available in the early
               phase, I anchored the work to WCAG 2.1 AA and the federal
-              plain-language standard. These aren't just compliance frameworks.
-              On a product where a misunderstood instruction could have real
-              legal consequences for a real person, they're the minimum floor.
+              plain-language standard.
             </p>
             <p>
-              What the research kept returning to was not a list of features to
-              add but a set of trust deficits to address. Users didn't need less
-              information — they needed the right information, in the right
-              sequence, with enough context to feel like the product was on
-              their side. That reframe shaped everything that followed.
+              From that research I defined three design principles that would
+              guide every decision in the redesign — information hierarchy and
+              progressive disclosure, clear step indicators, and stronger visual
+              clarity on actions and requirements.
             </p>
           </section>
 
@@ -348,40 +358,39 @@ export default function CaseStudy() {
             </h2>
             <p>
               Before wireframing anything, I wrote three design principles for
-              the project. Every major structural or visual decision was
-              evaluated against them. When two directions were in tension, the
-              principles were the tiebreaker.
+              the redesign.
             </p>
 
             <div className="cs-principle">
-              <strong>Clarity over completeness</strong>
+              <strong>Progressive disclosure over information dumping.</strong>
               <p>
-                Show what the user needs for this step. Information not yet
-                relevant belongs elsewhere — not hidden, just deferred. A user
-                filing their first immigration application should not encounter
-                the full scope of what they're about to do all at once.
+                Users were drowning in information presented all at once. I
+                restructured every screen to show only what was relevant at that
+                moment in the process — revealing complexity gradually as users
+                moved forward, not front-loading it at the start.
               </p>
             </div>
 
             <div className="cs-principle">
-              <strong>Trust is earned, not assumed</strong>
+              <strong>Orientation before action.</strong>
               <p>
-                Every interaction where the product makes a decision, explains a
-                requirement, or requests sensitive information must communicate
-                why. A user filling out immigration documents is trusting this
-                product with something that matters to their future. The design
-                has to honor that.
+                Users needed to know where they were before they could
+                confidently do anything. I introduced consistent page titles,
+                clear step indicators, and visible progress across every screen
+                in the flow. The question "what do I do next?" should never need
+                to be asked.
               </p>
             </div>
 
             <div className="cs-principle">
-              <strong>Status is never ambiguous</strong>
+              <strong>Visual urgency for real urgency.</strong>
               <p>
-                At any point in the flow, the user should be able to answer:
-                where am I, what's next, and am I on track — without hunting for
-                the answer. Visible progress isn't a nice-to-have on a
-                multi-step government filing process. It's a prerequisite for
-                completion.
+                Not everything in an immigration application is equally
+                important — some things are required, some are time-sensitive,
+                some carry legal consequences if missed. The redesign introduced
+                a consistent visual language for priority: required fields,
+                flagged documents, and critical notices all looked and behaved
+                differently from optional ones.
               </p>
             </div>
           </section>
@@ -407,19 +416,21 @@ export default function CaseStudy() {
             <div id="app-selection">
               <h3>5.1 Application Selection</h3>
               <p>
-                The original screen presented all application types as a flat
-                grid of cards with minimal labeling. A user encountering US
-                immigration applications for the first time had no way to know
-                which one applied to their situation without already knowing
-                immigration law.
+                The first screen a user sees after logging in. It should have
+                been simple — pick your application type and move forward.
+                Instead, the AI chatbot dominated the page visually, pulling
+                attention away from the actual decision point. Users thought
+                they had to use the chatbot to select their application type.
+                They were typing their situation into a chat window trying to
+                proceed, when the answer was a single click.
               </p>
               <p>
-                The redesign introduced a guided filter: a brief decision
-                sequence that narrowed the visible application types to those
-                relevant to the user's situation before they ever saw the full
-                list. Cards were restructured to lead with plain-language
-                descriptions over bureaucratic form names, with secondary labels
-                indicating who the form is for and what it accomplishes.
+                I restructured the page around a single clear question: _What
+                kind of application are you filing?_ Application type cards
+                became the primary element — larger, icon-led, impossible to
+                miss. The chatbot moved to a persistent but unobtrusive position
+                in the corner. A tab system between Family and Business
+                applications added useful structure without adding visual noise.
               </p>
 
               <div className="cs-ba">
@@ -428,7 +439,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">Before</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/app-selection-before.png"
+                        src="/img/case-studies/app-selection-web-before.png"
                         alt="Application selection screen before redesign"
                       />
                     </div>
@@ -456,20 +467,30 @@ export default function CaseStudy() {
             <div id="questionnaire">
               <h3>5.2 Questionnaire</h3>
               <p>
-                The questionnaire was the heart of the product — the AI-powered
-                interview gathering everything needed to complete the
-                application. It also looked the most like a raw database dump.
-                Questions appeared without context or grouping, progress was
-                invisible, and the emotional weight of the answers being
-                gathered wasn't acknowledged anywhere in the UI.
+                The questionnaire was the longest part of the application flow —
+                multiple sections, dozens of fields, high stakes for every
+                answer. The original design made it harder than it needed to be.
+                Font sizes were too small, contrast failed accessibility
+                standards, and the dense layout gave users no visual breathing
+                room between questions. The progress bar at the top was a string
+                of tiny dots that communicated nothing useful about how far
+                along you were or how much remained.
               </p>
               <p>
-                I restructured the questionnaire into grouped sections with
-                visible progress. Each section begins with a plain-language
-                orientation of what's being collected and why — not a legal
-                disclaimer, just enough context to make the next question feel
-                reasonable. The AI's logic was already strong; the redesign made
-                it legible.
+                Navigation made it worse — back and next arrows were positioned
+                at the top of the page, meaning users had to scroll back up
+                after completing a section just to move forward. There was no
+                page title, no context for where you were in the application,
+                and no clear way back to the dashboard if you needed to stop.
+              </p>
+              <p>
+                The redesign addressed all of it systematically. Body text
+                increased to 18px minimum. Generous vertical spacing between
+                fields created clear visual groups. The progress bar became a
+                clean horizontal tab system showing named sections — Name, About
+                You, Residence — so users always had orientation. Navigation
+                moved to the bottom, following the natural completion flow. A
+                back to dashboard button appeared top-left on every screen.
               </p>
 
               <div className="cs-ba">
@@ -478,7 +499,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">Before</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/questionnaire-before.png"
+                        src="/img/case-studies/questionnaire-web-before.png"
                         alt="Questionnaire screen before redesign"
                       />
                     </div>
@@ -507,18 +528,22 @@ export default function CaseStudy() {
             <div id="doc-checklist">
               <h3>5.3 Documentation Checklist</h3>
               <p>
-                The document checklist told users what to upload but not why,
-                not how, and not whether they were making progress. It was a
-                list without a shape — no hierarchy, no grouping, no sense of
-                what done looked like.
+                The documentation checklist was where applications most
+                frequently stalled. Users had to gather and upload a specific
+                set of documents, some required, some conditional, some that
+                could be flagged for attorney review. The original design
+                treated all of them the same — identical visual weight,
+                identical layout, no way to quickly see what needed attention
+                versus what was optional.
               </p>
               <p>
-                The redesign grouped documents by category — identity, status,
-                supporting evidence — and added a persistent progress indicator
-                at the top of the section. Each document item was expanded to
-                include a brief description of what it is, common sources for
-                it, and an upload state that made it visually clear whether a
-                document was pending, uploaded, or flagged for review.
+                The redesign introduced a clear visual hierarchy for document
+                status. Required documents were labeled explicitly. Flagged
+                items — documents that needed attorney attention — got a
+                distinct visual treatment that made them immediately scannable
+                in a long list. Uploaded files showed confirmation. The submit
+                button moved to the bottom, only reachable after working through
+                the list, preventing premature submissions.
               </p>
 
               <div className="cs-ba">
@@ -527,7 +552,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">Before</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/doc-checklist-before.png"
+                        src="/img/case-studies/checklist-web-before.png"
                         alt="Documentation checklist before redesign"
                       />
                     </div>
@@ -556,20 +581,28 @@ export default function CaseStudy() {
             <div id="filing-fee">
               <h3>5.4 Filing Fee</h3>
               <p>
-                Fee collection is one of the highest-anxiety moments in any
-                government filing flow. Users encountering an unexpected payment
-                prompt on an immigration portal — with no explanation of where
-                the money goes or what happens next — have every rational reason
-                to stop and leave.
+                Payment pages carry a specific kind of user anxiety — especially
+                when the amounts involved are significant. USCIS filing fees for
+                immigration applications can run into the hundreds of dollars,
+                and users needed to understand exactly what they were paying and
+                why before entering card details.
               </p>
               <p>
-                The redesign separated the fee explanation from the payment
-                action. Before asking for payment information, the screen walks
-                through what the fee is, where it goes, and what happens upon
-                receipt. The payment form itself follows a familiar, minimal
-                structure — nothing novel, nothing surprising. The goal was to
-                make the transaction feel like a known thing happening at an
-                expected moment, not a toll gate.
+                The original page buried the cost breakdown alongside the
+                payment form, mixing "here's what you owe" with "here's how to
+                pay" in a way that felt rushed and untrustworthy. Additional
+                fees for card payments appeared as an afterthought. The payment
+                method options lacked clear explanations of their differences.
+              </p>
+              <p>
+                The redesign separated the page into two distinct sections —
+                Cost Breakdown first, Payment second. Users could see the full
+                fee breakdown, understand what each line item was, and opt into
+                express shipping before touching the payment form. Each payment
+                method came with a clear explanation of additional fees and
+                processing times. The primary action — Pay Now — appeared only
+                after all the information needed to make that decision
+                confidently.
               </p>
 
               <div className="cs-ba">
@@ -578,7 +611,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">Before</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/filing-fee-before.png"
+                        src="/img/case-studies/fee-web-before.png"
                         alt="Filing fee screen before redesign"
                       />
                     </div>
@@ -587,7 +620,7 @@ export default function CaseStudy() {
                     <span className="cs-ba-label">After</span>
                     <div className="cs-ba-img">
                       <img
-                        src="/img/case-studies/fee-web.png"
+                        src="/img/case-studies/fee-web-after.png"
                         alt="Filing fee screen after redesign"
                       />
                     </div>
@@ -607,19 +640,28 @@ export default function CaseStudy() {
             <div id="signature">
               <h3>5.5 Signature Page</h3>
               <p>
-                The signature page was the final step before submission and
-                carried the most legal weight. The original design treated it as
-                a formality — a checkbox and a button. There was no review, no
-                summary, no acknowledgment that what the user was about to do
-                had real consequences.
+                The signature page was the last step before submitting an
+                application — a moment that should have felt like a clear finish
+                line. Instead the original design opened with a raw PDF viewer
+                taking up most of the screen, a submit button prominently placed
+                at the top before users had completed the required signing
+                steps, and signature requirements buried in small text below.
               </p>
               <p>
-                The redesign gave it the weight it deserved. The page begins
-                with a structured review summary — key case details, the
-                application type, and the submitting party — so users aren't
-                signing something they haven't had a chance to verify. The
-                signature itself is preceded by a plain-language statement of
-                what signing means, written at an accessible reading level.
+                Users were missing critical signing instructions not because
+                they weren't paying attention — they were. The design just
+                wasn't directing that attention in the right order. Incomplete
+                submissions were generating support tickets that shouldn't have
+                existed.
+              </p>
+              <p>
+                The redesign established a clear top-to-bottom flow: review the
+                PDF, understand the signature requirements, upload signed forms,
+                then submit. The submit button moved to the bottom — only
+                reachable after completing the steps above it. Signature
+                requirements for each party — Petitioner and Beneficiary — were
+                broken out into distinct, clearly labeled cards with explicit
+                instructions and upload actions.
               </p>
 
               <div className="cs-ba">
@@ -667,29 +709,18 @@ export default function CaseStudy() {
               The work shipped.
             </h2>
             <p>
-              Consulta launched to initial users in September 2025. Feedback
-              from that cohort confirmed what the research had pointed toward —
-              the primary friction was never with the AI logic, it was with the
-              experience around it. Users consistently described the redesigned
-              product as clear and trustworthy. In software that touches
-              immigration status, that's exactly the right signal.
+              The redesigned portal shipped to real users. The cofounders
+              confirmed the new design felt authentically Consulta — modern,
+              approachable, and genuinely useful. Support questions dropped
+              noticeably. Users reported finding the experience significantly
+              less confusing.
             </p>
             <p>
-              Completion rates for the questionnaire and document checklist —
-              the two highest-dropout points in the original product — improved
-              significantly. The filing fee screen, which had been a known
-              conversion obstacle in internal testing, showed the sharpest
-              single improvement. Getting the explanation in front of the
-              payment request turned out to matter more than any other change on
-              that screen.
-            </p>
-            <p>
-              The component library I built during the redesign became the
-              foundation for everything Consulta has shipped since. Design-to-
-              development cycles on new screens are faster because the system
-              exists. That compounding return on the systems work is probably
-              the outcome I'm most satisfied with — it means the design
-              investment doesn't stop at the features that were in scope.
+              It's worth being honest about the context: the company closed
+              seven months after I joined. But the product worked while it ran,
+              and the design work contributed to that. For users navigating one
+              of the most bureaucratically complex processes in American life,
+              that mattered.
             </p>
           </section>
 
@@ -707,39 +738,29 @@ export default function CaseStudy() {
               What I'd do differently.
             </h2>
             <p>
-              The biggest gap in this project was usability testing with actual
-              immigration applicants. We compensated with founder domain
-              knowledge and accessibility heuristics, and the result was good —
-              but I know there are assumptions in the information architecture
-              that real user sessions would surface quickly. If there were a
-              phase two, getting the product in front of five users with active
-              immigration cases would be the first item on the agenda.
+              The hardest part was designing without a feedback loop or
+              usability testing. No design team means no design critique, no one
+              to pressure-test your decisions. I relied heavily on founder
+              feedback, but that's not the same as talking to users. I should
+              have pushed harder for direct access to user feedback — even a
+              single conversation with someone navigating the platform would
+              have been worth more than a week of assumptions.
             </p>
             <p>
-              I'd also push harder earlier on AI transparency. The product's
-              underlying AI is doing sophisticated work — analyzing case
-              details, flagging inconsistencies, adapting question sequences in
-              real time — but almost none of that is visible to the user.
-              There's a genuine trust opportunity in making the AI's reasoning
-              legible without making it overwhelming. I got some of this done in
-              the questionnaire redesign, but it deserved its own focused
-              sprint.
-            </p>
-            <p>
-              On process: working solo on a fast-moving engineering team taught
-              me a lot about what modularity actually means in practice. The
-              founders were making product decisions daily, and the design
-              needed to be structured so individual screens could ship without
-              waiting for the full system. That pushed me toward the
-              component-library-first approach earlier than I might have
-              otherwise — which was the right call. But it also meant some
+              The pace of a startup means you're always making tradeoffs.
+              Working solo on a fast-moving engineering team taught me a lot
+              about what modularity actually means in practice. The founders
+              were making product decisions daily, and the design needed to be
+              structured so individual screens could ship without waiting for
+              the full system. That pushed me toward the component-library-first
+              approach earlier than I might have otherwise — which meant some
               cross-screen consistency issues I would have caught sooner with a
               more typical review cadence.
             </p>
             <p>
-              This is a product I'm proud of, and one I believe does something
-              genuinely useful. Making immigration filings less terrifying for
-              real people is not a small problem to work on.
+              Working directly with engineers was genuinely one of the best
+              parts. Learning to communicate design decisions in terms that made
+              sense for implementation — that's something I use every day now.
             </p>
           </section>
         </div>
