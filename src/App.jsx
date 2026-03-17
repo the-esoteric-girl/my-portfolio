@@ -8,9 +8,12 @@ import Contact from './components/Contact'
 
 function App() {
   return (
-    <main>
-      <p>Portfolio coming soon</p>
-    </main>
+    <>
+      <Cursor />
+      <main>
+        <p>Portfolio coming soon</p>
+      </main>
+    </>
   )
 }
 
