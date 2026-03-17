@@ -13,6 +13,7 @@ function App() {
       <Nav />
       <main>
         <Hero />
+        <CaseStudies />
       </main>
     </>
   );
