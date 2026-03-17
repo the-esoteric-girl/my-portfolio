@@ -12,7 +12,7 @@ function App() {
       <Cursor />
       <Nav />
       <main>
-        <p>Portfolio coming soon</p>
+        <Hero />
       </main>
     </>
   );
