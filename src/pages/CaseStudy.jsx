@@ -137,7 +137,7 @@ export default function CaseStudy() {
       </section>
 
       {/* ── Body ─────────────────────────────────────────────── */}
-      <div className="case-study-body">
+      <div className="cs-body">
 
         {/* Sidebar TOC */}
         <aside className="cs-sidebar" aria-label="Table of contents">

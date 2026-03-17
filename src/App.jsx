@@ -11,7 +11,6 @@ import CaseStudy from "./pages/CaseStudy";
 function Portfolio() {
   return (
     <>
-      <Cursor />
       <Nav />
       <main>
         <Hero />
@@ -26,6 +25,7 @@ function Portfolio() {
 function App() {
   return (
     <BrowserRouter>
+      <Cursor />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/case-studies/consulta" element={<CaseStudy />} />

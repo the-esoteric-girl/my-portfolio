@@ -4,11 +4,12 @@
   left: -100px;
   width: 8px;
   height: 8px;
-  background: var(--color-ink);
+  background: #ffffff;
   border-radius: var(--radius-full);
   pointer-events: none;
   z-index: var(--z-cursor);
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
 }
 
 .cursor-dot--click {
@@ -27,11 +28,12 @@
   left: -100px;
   width: 32px;
   height: 32px;
-  border: 2px solid var(--color-ink);
+  border: 2px solid #ffffff;
   border-radius: var(--radius-full);
   pointer-events: none;
   z-index: var(--z-cursor);
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
   transition:
     width var(--duration-base) var(--ease-out),
     height var(--duration-base) var(--ease-out),
