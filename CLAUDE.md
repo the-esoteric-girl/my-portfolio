@@ -1,130 +1,91 @@
 # Portfolio — Claude Code Rules
 
 ## Stack
-- React + Vite
-- Plain CSS (no Tailwind, no CSS-in-JS)
-- Deploy target: Vercel
+
+React + Vite, plain CSS, deploy on Vercel.
+No Tailwind. No CSS-in-JS. No utility frameworks.
 
 ## Aesthetic
-Brutalist / developer. Raw, typographically strong. No decorative softness.
 
-## Typography
-- **Headings:** Geist
-- **Body:** Instrument Sans
-- **Labels:** DM Mono, ALL CAPS
+Brutalist / developer. Raw, typographically strong.
+No decorative softness. Everything shown must mean something.
 
-## Color
-- **Never hardcode hex values.** Always use CSS custom properties from `src/styles/tokens.css`.
-- All semantic colors come from `--color-*` tokens only.
+## Design system
 
-## Shadows
-Hard offset, zero blur only. No soft/blurred shadows.
-```
---shadow-sm:  3px 3px 0px var(--color-ink)
---shadow-md:  5px 5px 0px var(--color-ink)
---shadow-lg:  8px 8px 0px var(--color-ink)
---shadow-accent-md: 5px 5px 0px var(--color-accent)
---shadow-accent-lg: 8px 8px 0px var(--color-accent)
-```
+All values (colors, spacing, shadows, typography, z-index,
+breakpoints) live in src/styles/tokens.css.
+Read that file first. Never hardcode any value that has a token.
 
-### Interactive shadow pattern
-- **Hover:** shadow grows one step + `transform: translate(-2px, -2px)`
-- **Active/press:** shadow collapses + `transform: translate(3px, 3px)`
+## Typography rules
 
-## Border Radius
-Sharp corners only. No softness.
-```
---radius-none: 0px
---radius-sm:   2px
---radius-md:   4px
---radius-full: 9999px   ← pills only
-```
-Never use radius above 4px except for pill/badge components.
+- Headings: var(--font-heading) — Geist, always var(--tracking-tight)
+- Body: var(--font-body) — Instrument Sans
+- Labels/tags/metadata: var(--font-mono) — DM Mono,
+  always uppercase, always var(--tracking-wider)
 
-## Borders
-2px solid minimum for all primary borders.
+## Color rules
 
-## Button System
+- Never hardcode hex values — always use --color-\* semantic tokens
+- --color-accent = primary actions, CTAs, links, focus rings
+- --color-secondary = captions, metadata, tags, secondary labels (lavender)
+- --color-status = available/live indicators only (green)
+- --color-ink = shadows and primary borders
 
-Five button types. Never invent variations outside these.
+## Shadow rules
 
-### Primary
-- Use: Main CTA, one per view maximum
-- Style: background var(--color-accent), color var(--color-text-inverse),
-  border: var(--border), box-shadow: var(--shadow-md)
-- Hover: box-shadow var(--shadow-lg), transform: translate(-2px, -2px)
-- Active: box-shadow: var(--shadow-pressed), transform: translate(3px, 3px)
-
-### Secondary
-- Use: Supporting actions alongside a primary
-- Style: background transparent, color var(--color-text-primary),
-  border: var(--border), box-shadow: var(--shadow-md)
-- Same hover/active pattern as primary
-
-### Ghost
-- Use: Card-level actions only, never in hero or nav
-- Style: background transparent, color var(--color-secondary),
-  border: 2px solid var(--color-secondary),
-  box-shadow: var(--shadow-md) but using var(--color-secondary) not ink
-- Hover: shadow grows, translate(-2px, -2px)
-
-### Icon
-- Use: Compact single actions (links, close, arrow)
-- Style: 40x40px square, transparent background, border: var(--border),
-  box-shadow: var(--shadow-sm)
-- Hover: var(--shadow-md), translate(-2px, -2px)
-
-### Destructive
-- Use: Irreversible actions only (delete, remove)
-- Style: background #b91c1c, color var(--color-text-inverse), border: var(--border)
-
-### Disabled
-- Use: Unavailable state on any button type
-- Style: background var(--color-surface), color var(--color-text-muted),
-  border: 1px solid var(--color-border), no box-shadow, cursor: not-allowed
-
-### Sizes
-- SM: font-size var(--text-xs), padding 7px 14px, shadow-sm
-- MD: font-size var(--text-sm), padding 10px 20px, shadow-md (default)
-- LG: font-size var(--text-sm), padding 14px 28px, shadow-md
-
-### All buttons
-- Font: var(--font-mono), var(--weight-medium), var(--tracking-wider), uppercase
-- Border radius: 0 always
-- Transition: box-shadow var(--duration-fast), transform var(--duration-fast)
+- Hard offset only — zero blur, zero spread, always
+- Use --shadow-sm / --shadow-md / --shadow-lg from tokens
+- Interactive pattern: hover → shadow grows one step + translate(-2px,-2px)
+- Active/press → --shadow-pressed + translate(3px,3px)
 - prefers-reduced-motion: no transform, no transition
 
-## Breakpoints (mobile-first)
-```
-480px   (xs)
-768px   (sm/tablet)
-1024px  (md/desktop)
-1280px  (lg/wide)
-```
+## Border rules
 
-## Naming Conventions
-- CSS class names: `kebab-case`
-- React components: `PascalCase`
+- Primary borders: var(--border) — 2px solid var(--color-ink)
+- Dividers and subtle edges: var(--border-subtle)
+- Never use border-radius above --radius-md (4px) except pills (--radius-full)
+
+## Button rules
+
+Never write custom button styles in component CSS.
+Always use src/components/ui/Button.jsx.
+Props: variant (primary|secondary|ghost|icon|destructive),
+size (sm|md|lg), as (button|a), href, disabled.
+Full styles in src/components/ui/Button.css.
+
+## Component rules
+
 - One component per file
+- CSS co-located: ComponentName.jsx + ComponentName.css
+- Reusable primitives live in src/components/ui/
+- Page sections live in src/components/
 
-## Accessibility
-- WCAG AA minimum contrast
-- Always `:focus-visible` with accent color outline (never remove outline)
-- Semantic HTML elements throughout
-- `prefers-reduced-motion` on all animations and transitions
+## Naming
 
-## Never Use
-- Tailwind
-- Soft/blurred shadows (no `box-shadow` with blur > 0)
-- `border-radius` above 4px except pills
-- Inter, Roboto, or system-ui as primary fonts
-- `!important`
-- Lorem ipsum placeholder text
+- CSS classes: kebab-case
+- Components: PascalCase
+- Variables: camelCase
+- Constants: SCREAMING_SNAKE_CASE
 
-## Commit Format
-```
-feat:   new feature
-fix:    bug fix
-style:  visual/CSS only change
-chore:  tooling, deps, config
-```
+## Accessibility — non-negotiable
+
+- WCAG AA contrast minimum on all text
+- :focus-visible always present, never removed
+- Semantic HTML — header, nav, main, section, article, footer
+- All sections have aria-label or a visible heading
+- All images have alt text
+- prefers-reduced-motion respected on every animation
+
+## Never
+
+- Hardcode colors, spacing, or shadow values
+- Use soft/blurred box-shadows
+- Use border-radius above 4px except pills
+- Use !important
+- Use Lorem ipsum — ask for real content instead
+- Write button styles outside Button.css
+
+## Commits
+
+feat: / fix: / style: / chore:
+Commit after every completed component or meaningful change.
