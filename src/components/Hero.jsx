@@ -7,7 +7,8 @@ function Hero() {
       <div className="hero-content">
         <span className="hero-tag">[ UX / UI DESIGNER ]</span>
         <h1 className="hero-name">
-          Sophia<br />
+          Sophia
+          <br />
           <span className="hero-name-accent">Ling.</span>
         </h1>
         <p className="hero-tagline">
@@ -19,8 +20,12 @@ function Hero() {
           <span className="hero-pill">ACCESSIBILITY</span>
         </div>
         <div className="hero-ctas">
-          <a href="#work" className="hero-btn hero-btn--primary">VIEW WORK →</a>
-          <a href="#contact" className="hero-btn hero-btn--secondary">GET IN TOUCH</a>
+          <a href="#work" className="hero-btn hero-btn--primary">
+            VIEW WORK →
+          </a>
+          <a href="#contact" className="hero-btn hero-btn--secondary">
+            GET IN TOUCH
+          </a>
         </div>
       </div>
 
@@ -32,10 +37,24 @@ function Hero() {
           <span className="hero-status-dot" aria-hidden="true" />
           AVAILABLE FOR WORK
         </span>
-        <span className="hero-bottom-location">SEATTLE, WA — 2025</span>
-        <Label variant="footer" as="a" href="mailto:sophiaxuling@gmail.com">sophiaxuling@gmail.com</Label>
-        <Label variant="footer" as="a" href="https://linkedin.com/in/sophia-x-ling">LinkedIn ↗</Label>
-        <Label variant="footer" as="a" href="https://github.com/the-esoteric-girl">GitHub ↗</Label>
+        <span className="hero-bottom-location">SEATTLE, WA — 2026</span>
+        <Label variant="footer" as="a" href="mailto:sophiaxuling@gmail.com">
+          sophiaxuling@gmail.com
+        </Label>
+        <Label
+          variant="footer"
+          as="a"
+          href="https://linkedin.com/in/sophia-x-ling"
+        >
+          LinkedIn ↗
+        </Label>
+        <Label
+          variant="footer"
+          as="a"
+          href="https://github.com/the-esoteric-girl"
+        >
+          GitHub ↗
+        </Label>
       </div>
     </section>
   );
