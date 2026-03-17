@@ -48,7 +48,9 @@ function About() {
               </div>
               <div className="about-fact">
                 <span className="about-fact-label">Status</span>
-                <span className="about-fact-value about-fact-value--accent">Available</span>
+                <span className="about-fact-value about-fact-value--accent">
+                  Available
+                </span>
               </div>
             </div>
 
@@ -58,14 +60,22 @@ function About() {
                 <span className="about-link-value">sophiaxuling@gmail.com</span>
                 <span className="about-link-arrow">↗</span>
               </a>
-              <a className="about-link" href="https://linkedin.com/in/sophia-x-ling"
-                 target="_blank" rel="noopener noreferrer">
+              <a
+                className="about-link"
+                href="https://linkedin.com/in/sophia-x-ling"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="about-link-label">LinkedIn</span>
                 <span className="about-link-value">sophia-x-ling</span>
                 <span className="about-link-arrow">↗</span>
               </a>
-              <a className="about-link" href="https://github.com/the-esoteric-girl"
-                 target="_blank" rel="noopener noreferrer">
+              <a
+                className="about-link"
+                href="https://github.com/the-esoteric-girl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="about-link-label">GitHub</span>
                 <span className="about-link-value">the-esoteric-girl</span>
                 <span className="about-link-arrow">↗</span>
@@ -121,39 +131,36 @@ function About() {
         <div className="about-personal">
           <Label variant="eyebrow">[ Beyond the Brief ]</Label>
           <div className="about-images-grid">
-            <div className="about-img">
-              <img
-                src="/img/thanksgiving.jpg"
-                alt="White buttercream cake with 'happy thanksgiving 2025' written on it and piped rosettes"
-              />
-            </div>
-            <div className="about-img">
-              <img
-                src="/img/strawberries.jpg"
-                alt="Chocolate-dipped strawberries with detailing"
-              />
-            </div>
-            <div className="about-img">
-              <img
-                src="/img/strawberrycake.jpg"
-                alt="Asian-style whipped cream chiffon cake with strawberries on top"
-              />
-            </div>
-            <div className="about-img">
-              <img
-                src="/img/purple.jpg"
-                alt="Purple buttercream cake with 'twenty one' written on top and star and flower detailing"
-              />
-            </div>
-            <div className="about-img">
-              <img
-                src="/img/personal-5.jpg"
-                alt="Workshop talk on accessibility"
-              />
-            </div>
-            <div className="about-img">
-              <img src="/img/fruittart.jpg" alt="Fruit tarts" />
-            </div>
+            <img
+              className="about-img"
+              src="/img/thanksgiving.jpg"
+              alt="White buttercream cake with 'happy thanksgiving 2025' written on it and piped rosettes"
+            />
+            <img
+              className="about-img"
+              src="/img/strawberries.jpg"
+              alt="Chocolate-dipped strawberries with detailing"
+            />
+            <img
+              className="about-img"
+              src="/img/strawberrycake.jpg"
+              alt="Asian-style whipped cream chiffon cake with strawberries on top"
+            />
+            <img
+              className="about-img"
+              src="/img/purple.jpg"
+              alt="Purple buttercream cake with 'twenty one' written on top and star and flower detailing"
+            />
+            <img
+              className="about-img"
+              src="/img/astronaut.jpg"
+              alt="Watercolor painting of astronaut in space"
+            />
+            <img
+              className="about-img"
+              src="/img/fruittart.jpg"
+              alt="Fruit tarts"
+            />
           </div>
         </div>
       </div>

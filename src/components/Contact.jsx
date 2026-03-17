@@ -122,7 +122,7 @@ export default function Contact() {
                     name="message"
                     required
                     rows={5}
-                    placeholder="Tell me about your project..."
+                    placeholder="Write here..."
                   />
                 </div>
                 {error && <p className="contact-error">{error}</p>}

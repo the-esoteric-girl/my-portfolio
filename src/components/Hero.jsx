@@ -16,9 +16,9 @@ function Hero() {
           UX/UI designer with a bias for systems thinking and technical craft.
         </p>
         <div className="hero-pills">
-          <span className="hero-pill hero-pill--filled">FIGMA</span>
-          <span className="hero-pill">REACT</span>
-          <span className="hero-pill">ACCESSIBILITY</span>
+          <Label variant="pill">Interaction Design</Label>
+          <Label variant="pill">Systems Thinking</Label>
+          <Label variant="pill">AI Products</Label>
         </div>
         <div className="hero-ctas">
           <Button as="a" href="#work" variant="primary" size="lg">
@@ -32,34 +32,35 @@ function Hero() {
 
       <div className="hero-aside" aria-hidden="true" />
 
-      <div className="hero-bottom">
-        <span className="hero-bottom-scroll">↓ SCROLL TO EXPLORE</span>
-        <span className="hero-bottom-status">
-          <span className="hero-status-dot" aria-hidden="true" />
-          AVAILABLE FOR WORK
+      <div className="hero-bar-meta">
+        <div className="hero-bar-status">Available for work</div>
+        <span className="hero-bar-location">
+          <span className="hero-bar-location-full">Seattle, WA — 2026</span>
+          <span className="hero-bar-location-short">Seattle, WA</span>
         </span>
-        <span className="hero-bottom-location">SEATTLE, WA — 2026</span>
-        <Label variant="footer" as="a" href="mailto:sophiaxuling@gmail.com">
-          sophiaxuling@gmail.com
-        </Label>
-        <Label
-          variant="footer"
-          as="a"
+        <span className="hero-bar-scroll">↓ Scroll to explore</span>
+      </div>
+
+      <div className="hero-bar-links">
+        <a className="hero-bar-link hero-bar-link--email" href="mailto:sophiaxuling@gmail.com">
+          sophiaxuling@gmail.com ↗
+        </a>
+        <a
+          className="hero-bar-link"
           href="https://linkedin.com/in/sophia-x-ling"
           target="_blank"
           rel="noopener noreferrer"
         >
           LinkedIn ↗
-        </Label>
-        <Label
-          variant="footer"
-          as="a"
+        </a>
+        <a
+          className="hero-bar-link"
           href="https://github.com/the-esoteric-girl"
           target="_blank"
           rel="noopener noreferrer"
         >
           GitHub ↗
-        </Label>
+        </a>
       </div>
     </section>
   );
