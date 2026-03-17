@@ -51,6 +51,24 @@ function About() {
                 Available
               </span>
             </div>
+            <div className="about-fact">
+              <span className="about-fact-label">Email</span>
+              <span className="about-fact-value">
+                <a href="mailto:sophiaxuling@gmail.com">sophiaxuling@gmail.com</a>
+              </span>
+            </div>
+            <div className="about-fact">
+              <span className="about-fact-label">LinkedIn</span>
+              <span className="about-fact-value">
+                <a href="https://linkedin.com/in/sophia-x-ling">linkedin.com/in/sophia-x-ling</a>
+              </span>
+            </div>
+            <div className="about-fact">
+              <span className="about-fact-label">GitHub</span>
+              <span className="about-fact-value">
+                <a href="https://github.com/the-esoteric-girl">github.com/the-esoteric-girl</a>
+              </span>
+            </div>
           </div>
 
           {/* Right: bio */}

@@ -26,9 +26,7 @@ Read that file first. Never hardcode any value that has a token.
 ## Color rules
 
 - Never hardcode hex values — always use --color-\* semantic tokens
-- --color-accent = primary actions, CTAs, links, focus rings
-- --color-secondary = captions, metadata, tags, secondary labels (lavender)
-- --color-status = available/live indicators only (green)
+- --color-accent = primary actions, CTAs, links, focus rings, status indicators
 - --color-ink = shadows and primary borders
 
 ## Shadow rules
@@ -49,7 +47,7 @@ Read that file first. Never hardcode any value that has a token.
 
 Never write custom button styles in component CSS.
 Always use src/components/ui/Button.jsx.
-Props: variant (primary|secondary|ghost|icon|destructive),
+Props: variant (primary|secondary|icon|destructive),
 size (sm|md|lg), as (button|a), href, disabled.
 Full styles in src/components/ui/Button.css.
 

@@ -1,6 +1,6 @@
 /* ============================================================
    BUTTON
-   Five variants × three sizes. No variations outside this file.
+   Four variants × three sizes. No variations outside this file.
    ============================================================ */
 
 /* ── Base ──────────────────────────────────────────────────── */
@@ -51,24 +51,6 @@
   color: var(--color-text-primary);
 }
 
-.btn--ghost {
-  background: transparent;
-  color: var(--color-secondary);
-  border: 2px solid var(--color-secondary);
-}
-
-.btn--ghost.btn--sm {
-  box-shadow: 3px 3px 0 var(--color-secondary);
-}
-
-.btn--ghost.btn--md {
-  box-shadow: 5px 5px 0 var(--color-secondary);
-}
-
-.btn--ghost.btn--lg {
-  box-shadow: 8px 8px 0 var(--color-secondary);
-}
-
 .btn--icon {
   width: 40px;
   height: 40px;
@@ -90,11 +72,6 @@
 .btn--secondary:hover:not(:disabled):not([aria-disabled="true"]),
 .btn--destructive:hover:not(:disabled):not([aria-disabled="true"]) {
   box-shadow: var(--shadow-lg);
-  transform: translate(-2px, -2px);
-}
-
-.btn--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
-  box-shadow: 8px 8px 0 var(--color-secondary);
   transform: translate(-2px, -2px);
 }
 

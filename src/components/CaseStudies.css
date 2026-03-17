@@ -71,7 +71,7 @@
 }
 
 .case-study-outcomes {
-  border-left: 2px solid var(--color-secondary);
+  border-left: var(--border-subtle);
   padding-left: var(--space-3);
   display: flex;
   flex-direction: column;

@@ -1,4 +1,5 @@
 import "./Hero.css";
+import Label from "./ui/Label";
 
 function Hero() {
   return (
@@ -32,6 +33,9 @@ function Hero() {
           AVAILABLE FOR WORK
         </span>
         <span className="hero-bottom-location">SEATTLE, WA — 2025</span>
+        <Label variant="footer" as="a" href="mailto:sophiaxuling@gmail.com">sophiaxuling@gmail.com</Label>
+        <Label variant="footer" as="a" href="https://linkedin.com/in/sophia-x-ling">LinkedIn ↗</Label>
+        <Label variant="footer" as="a" href="https://github.com/the-esoteric-girl">GitHub ↗</Label>
       </div>
     </section>
   );

@@ -98,7 +98,17 @@
 }
 
 .about-fact-value--status {
-  color: var(--color-status);
+  color: var(--color-accent);
+}
+
+.about-fact-value a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.about-fact-value a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ── Bio column ─────────────────────────────────────────── */
@@ -140,9 +150,9 @@
 
 .about-images-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 220px);
-  gap: var(--space-4);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 200px;
+  gap: var(--space-3);
 }
 
 .about-img-wrap {
@@ -175,6 +185,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 

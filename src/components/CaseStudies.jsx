@@ -45,7 +45,7 @@ export default function CaseStudies() {
                 </div>
                 <div className="case-study-footer">
                   <Button
-                    variant="ghost"
+                    variant="secondary"
                     size="md"
                     as="a"
                     href="/case-studies/consulta"
