@@ -9,6 +9,11 @@ export default function Contact() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    const lastSubmitted = localStorage.getItem("contact_last_submitted");
+    if (lastSubmitted && Date.now() - Number(lastSubmitted) < 60000) {
+      setError("Please wait a minute before sending another message.");
+      return;
+    }
     const form = e.target;
     try {
       const res = await fetch("https://formspree.io/f/mjgapavd", {
@@ -17,6 +22,7 @@ export default function Contact() {
         headers: { Accept: "application/json" },
       });
       if (res.ok) {
+        localStorage.setItem("contact_last_submitted", String(Date.now()));
         setSubmitted(true);
         setError("");
       } else {
