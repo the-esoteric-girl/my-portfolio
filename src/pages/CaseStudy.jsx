@@ -235,10 +235,13 @@ export default function CaseStudy() {
               wasn't just making it look better. It was making it work better
               for people in one of the most stressful situations of their lives.
             </p>
-            <h3 className="cs-sub-heading">Outcomes</h3>
+            <h4 className="cs-paragraph-heading">Outcomes</h4>
             <p>
-              Support questions dropped. Users reported significantly less
-              confusion.
+              Support questions dropped significantly after launch. Attorneys
+              had more time for actual legal work — instead of fielding
+              preventable questions, they could focus on the cases in front of
+              them. Users made fewer mistakes too: less premature submissions,
+              less forgotten steps, less confusion about what came next.
             </p>
           </section>
 
@@ -267,6 +270,7 @@ export default function CaseStudy() {
               available but not prioritized. The interface assumed users would
               figure it out.
             </p>
+            <h4 className="cs-paragraph-heading">Confusing Visual Hierarchy</h4>
             <p>
               Visual hierarchy was effectively nonexistent. Every element
               competed equally for attention — headings, body text, CTAs,
@@ -274,6 +278,7 @@ export default function CaseStudy() {
               anything else, which meant nothing got noticed when it needed to
               be.
             </p>
+            <h4 className="cs-paragraph-heading">Lack of Accessibility</h4>
             <p>
               Accessibility had clearly never been a consideration. Font sizes
               were too small, contrast ratios failed basic WCAG standards, and
@@ -281,6 +286,9 @@ export default function CaseStudy() {
               a high-stakes, stressful process, these weren't minor
               inconveniences — they were barriers.
             </p>
+            <h4 className="cs-paragraph-heading">
+              No Consistent Visual Language
+            </h4>
             <p>
               The inconsistency made it worse. Buttons looked different across
               screens. Spacing was arbitrary. Patterns that appeared one way on
@@ -735,8 +743,11 @@ export default function CaseStudy() {
               <span>Reflection</span>
             </div>
             <h2 id="title-reflection" className="cs-section-title">
-              What I'd do differently.
+              What I learned.
             </h2>
+            <h4 className="cs-paragraph-heading">
+              Prioritize usability testing and user feedback.
+            </h4>
             <p>
               The hardest part was designing without a feedback loop or
               usability testing. No design team means no design critique, no one
@@ -746,6 +757,10 @@ export default function CaseStudy() {
               single conversation with someone navigating the platform would
               have been worth more than a week of assumptions.
             </p>
+            <h4 className="cs-paragraph-heading">
+              Working solo on a fast-moving team pushed me toward a
+              component-library-first approach — which had real tradeoffs.
+            </h4>
             <p>
               The pace of a startup means you're always making tradeoffs.
               Working solo on a fast-moving engineering team taught me a lot
@@ -757,10 +772,13 @@ export default function CaseStudy() {
               cross-screen consistency issues I would have caught sooner with a
               more typical review cadence.
             </p>
+            <h4 className="cs-paragraph-heading">
+              Learning to speak engineer made me a better designer.
+            </h4>
             <p>
-              Working directly with engineers was genuinely one of the best
-              parts. Learning to communicate design decisions in terms that made
-              sense for implementation — that's something I use every day now.
+              Working directly with engineers was one of the best parts of this
+              role. Learning to translate design decisions into implementation
+              terms is a skill I use every day now.
             </p>
           </section>
         </div>

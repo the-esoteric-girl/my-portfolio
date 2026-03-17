@@ -41,7 +41,7 @@
 .contact-heading {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-medium);
   letter-spacing: var(--tracking-tight);
   line-height: 1.1;
 }

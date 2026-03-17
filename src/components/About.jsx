@@ -114,11 +114,13 @@ function About() {
             <div className="about-ctas">
               <Button
                 as="a"
-                href="/sophia-ling-resume.pdf"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 variant="primary"
                 size="md"
               >
-                Download Resume
+                View Resume ↗
               </Button>
               <Button as="a" href="#contact" variant="secondary" size="md">
                 Get In Touch

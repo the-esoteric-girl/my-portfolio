@@ -45,10 +45,7 @@ export default function Contact() {
         <div className="contact-grid">
           <div className="contact-left">
             <div className="contact-intro">
-              <h3 className="contact-heading">
-                Let's work <br />
-                <span>together.</span>
-              </h3>
+              <h3 className="contact-heading">Let's work together.</h3>
               <p className="contact-desc">
                 I'm open to full-time roles, freelance projects, and
                 collaborations. Whether you have a brief or just want to talk
