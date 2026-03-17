@@ -20,10 +20,14 @@ export default function Button({
     .filter(Boolean)
     .join(' ');
 
-  if (as === 'a') {
+  if (as !== 'button') {
+    const Component = as;
+    const linkProps = typeof as === 'string'
+      ? { href: disabled ? undefined : href }
+      : { to: disabled ? undefined : href };
     return (
-      <a
-        href={disabled ? undefined : href}
+      <Component
+        {...linkProps}
         className={classes}
         aria-disabled={disabled || undefined}
         tabIndex={disabled ? -1 : undefined}
@@ -31,7 +35,7 @@ export default function Button({
         {...rest}
       >
         {children}
-      </a>
+      </Component>
     );
   }
 

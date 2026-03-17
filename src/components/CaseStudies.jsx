@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./ui/Button";
 import Label from "./ui/Label";
 import "./CaseStudies.css";
@@ -47,7 +48,7 @@ export default function CaseStudies() {
                   <Button
                     variant="secondary"
                     size="md"
-                    as="a"
+                    as={Link}
                     href="/case-studies/consulta"
                   >
                     View Case Study →

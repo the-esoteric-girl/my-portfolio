@@ -35,14 +35,17 @@ function Hero() {
       <div className="hero-bar-meta">
         <div className="hero-bar-status">Available for work</div>
         <span className="hero-bar-location">
-          <span className="hero-bar-location-full">Seattle, WA — 2026</span>
+          <span className="hero-bar-location-full">Seattle, WA</span>
           <span className="hero-bar-location-short">Seattle, WA</span>
         </span>
         <span className="hero-bar-scroll">↓ Scroll to explore</span>
       </div>
 
       <div className="hero-bar-links">
-        <a className="hero-bar-link hero-bar-link--email" href="mailto:sophiaxuling@gmail.com">
+        <a
+          className="hero-bar-link hero-bar-link--email"
+          href="mailto:sophiaxuling@gmail.com"
+        >
           sophiaxuling@gmail.com ↗
         </a>
         <a
