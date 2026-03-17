@@ -6,6 +6,7 @@ import CaseStudies from "./components/CaseStudies";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
 
 function Portfolio() {
@@ -18,6 +19,7 @@ function Portfolio() {
         <About />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }

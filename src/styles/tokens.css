@@ -122,9 +122,15 @@
   --link-external-indicator: ' ↗';
 }
 
+/* ── Semantic: Always tokens (never flip with theme) ────────── */
+:root {
+  --color-always-dark: #0e0e11;
+  --color-always-light: #f1f3f5;
+}
+
 /* ── Semantic: Dark mode overrides ──────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --color-bg: #0e0e11;
     --color-surface: #1a1d22;
     --color-border: #2a3040;
@@ -136,6 +142,32 @@
     --color-ink: var(--slate-50);
     --color-danger: #ef4444;
   }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0e0e11;
+  --color-surface: #1a1d22;
+  --color-border: #2a3040;
+  --color-text-primary: var(--slate-50);
+  --color-text-muted: var(--slate-400);
+  --color-text-inverse: var(--slate-900);
+  --color-accent: var(--accent-400);
+  --color-accent-hover: var(--accent-200);
+  --color-ink: var(--slate-50);
+  --color-danger: #ef4444;
+}
+
+:root[data-theme="light"] {
+  --color-bg: var(--slate-50);
+  --color-surface: #ffffff;
+  --color-border: var(--slate-200);
+  --color-text-primary: var(--slate-900);
+  --color-text-muted: var(--slate-600);
+  --color-text-inverse: var(--slate-50);
+  --color-accent: var(--accent-400);
+  --color-accent-hover: var(--accent-600);
+  --color-ink: #0e0e11;
+  --color-danger: #b91c1c;
 }
 
 /* ── Global reset ──────────────────────────────────────────── */

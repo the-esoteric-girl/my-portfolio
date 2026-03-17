@@ -10,7 +10,7 @@ function Hero() {
         <h1 className="hero-name">
           Sophia
           <br />
-          <span className="hero-name-accent">Ling.</span>
+          <span>Ling.</span>
         </h1>
         <p className="hero-tagline">
           UX/UI designer with a bias for systems thinking and technical craft.

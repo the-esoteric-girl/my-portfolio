@@ -5,7 +5,7 @@
 
 /* ── Hero ────────────────────────────────────────────────── */
 .cs-hero {
-  background: var(--color-ink);
+  background: var(--color-always-dark);
   border-bottom: 2px solid var(--color-bg);
   padding-bottom: var(--space-16);
 }

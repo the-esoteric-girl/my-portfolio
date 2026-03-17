@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "../hooks/useTheme";
 import "./Nav.css";
 
 const NAV_LINKS = [
@@ -8,6 +9,7 @@ const NAV_LINKS = [
 ];
 
 function Nav() {
+  const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -49,6 +51,14 @@ function Nav() {
             </li>
           ))}
         </ul>
+
+        <button
+          className="nav-theme-toggle"
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          onClick={toggleTheme}
+        >
+          {isDark ? "☀" : "☽"}
+        </button>
 
         <button
           className="nav-hamburger"

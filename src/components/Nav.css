@@ -64,6 +64,43 @@
   color: var(--color-accent);
 }
 
+/* ── Theme toggle ──────────────────────────────────────────── */
+.nav-theme-toggle {
+  width: 32px;
+  height: 32px;
+  border: var(--border);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  box-shadow: var(--shadow-sm);
+  border-radius: 0;
+  transition: box-shadow var(--duration-fast), transform var(--duration-fast);
+  flex-shrink: 0;
+}
+
+.nav-theme-toggle:hover {
+  box-shadow: var(--shadow-md);
+  transform: translate(-1px, -1px);
+}
+
+.nav-theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-theme-toggle {
+    transition: none;
+  }
+  .nav-theme-toggle:hover {
+    transform: none;
+  }
+}
+
 /* ── Hamburger ─────────────────────────────────────────────── */
 .nav-hamburger {
   display: none;

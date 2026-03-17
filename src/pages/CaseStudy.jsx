@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../components/ui/Button";
 import Label from "../components/ui/Label";
+import Footer from "../components/Footer";
 import "./CaseStudy.css";
 
 const TOC_ITEMS = [
@@ -674,6 +675,7 @@ export default function CaseStudy() {
 
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
