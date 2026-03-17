@@ -1,5 +1,6 @@
 import "./Hero.css";
 import Label from "./ui/Label";
+import Button from "./ui/Button";
 
 function Hero() {
   return (
@@ -20,12 +21,12 @@ function Hero() {
           <span className="hero-pill">ACCESSIBILITY</span>
         </div>
         <div className="hero-ctas">
-          <a href="#work" className="hero-btn hero-btn--primary">
+          <Button as="a" href="#work" variant="primary" size="lg">
             VIEW WORK →
-          </a>
-          <a href="#contact" className="hero-btn hero-btn--secondary">
+          </Button>
+          <Button as="a" href="#contact" variant="secondary" size="lg">
             GET IN TOUCH
-          </a>
+          </Button>
         </div>
       </div>
 

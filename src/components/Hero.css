@@ -89,46 +89,6 @@
   gap: var(--space-4);
 }
 
-.hero-btn {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border: var(--border);
-  border-radius: var(--radius-none);
-  box-shadow: var(--shadow-md);
-  transition:
-    box-shadow var(--duration-fast) var(--ease-snappy),
-    transform   var(--duration-fast) var(--ease-snappy);
-  display: inline-block;
-  cursor: none;
-}
-
-.hero-btn:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translate(-2px, -2px);
-}
-
-.hero-btn:active {
-  box-shadow: var(--shadow-pressed);
-  transform: translate(3px, 3px);
-}
-
-.hero-btn:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-.hero-btn--primary {
-  background: var(--color-accent);
-  color: var(--color-text-inverse);
-}
-
-.hero-btn--secondary {
-  background: transparent;
-  color: var(--color-text-primary);
-}
 
 /* ── Bottom bar ────────────────────────────────────────────── */
 .hero-bottom {
@@ -194,14 +154,3 @@
   }
 }
 
-/* ── Reduced motion ────────────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  .hero-btn {
-    transition: none;
-  }
-
-  .hero-btn:hover,
-  .hero-btn:active {
-    transform: none;
-  }
-}

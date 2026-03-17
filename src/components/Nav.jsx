@@ -1,47 +1,51 @@
-import { useState, useEffect } from 'react'
-import './Nav.css'
+import { useState, useEffect } from "react";
+import "./Nav.css";
 
 const NAV_LINKS = [
-  { label: 'Work',    href: '#work'    },
-  { label: 'About',   href: '#about'   },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
 
 function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    if (!isMenuOpen) return
+    if (!isMenuOpen) return;
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsMenuOpen(false)
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isMenuOpen])
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
 
-  const closeMenu = () => setIsMenuOpen(false)
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <nav
-      className={`nav${isScrolled ? ' nav--scrolled' : ''}`}
+      className={`nav${isScrolled ? " nav--scrolled" : ""}`}
       aria-label="Main navigation"
     >
       <div className="nav-inner">
-        <a href="#" className="nav-logo">sophia.dev</a>
+        <a href="#" className="nav-logo">
+          Sophia Ling
+        </a>
 
         <ul className="nav-links" role="list">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
-              <a href={href} className="nav-link">{label}</a>
+              <a href={href} className="nav-link">
+                {label}
+              </a>
             </li>
           ))}
         </ul>
@@ -61,7 +65,7 @@ function Nav() {
 
       <div
         id="nav-overlay"
-        className={`nav-overlay${isMenuOpen ? ' nav-overlay--open' : ''}`}
+        className={`nav-overlay${isMenuOpen ? " nav-overlay--open" : ""}`}
         aria-hidden={!isMenuOpen}
       >
         <ul className="nav-overlay-links" role="list">
@@ -75,7 +79,7 @@ function Nav() {
         </ul>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

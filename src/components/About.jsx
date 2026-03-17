@@ -33,41 +33,43 @@ function About() {
               />
             </div>
 
-            <div className="about-fact">
-              <span className="about-fact-label">Based in</span>
-              <span className="about-fact-value">Seattle, WA</span>
+            <div className="about-facts">
+              <div className="about-fact">
+                <span className="about-fact-label">Experience</span>
+                <span className="about-fact-value">2+ Years</span>
+              </div>
+              <div className="about-fact">
+                <span className="about-fact-label">Focus</span>
+                <span className="about-fact-value">Product Design</span>
+              </div>
+              <div className="about-fact">
+                <span className="about-fact-label">Based in</span>
+                <span className="about-fact-value">Seattle, WA</span>
+              </div>
+              <div className="about-fact">
+                <span className="about-fact-label">Status</span>
+                <span className="about-fact-value about-fact-value--accent">Available</span>
+              </div>
             </div>
-            <div className="about-fact">
-              <span className="about-fact-label">Experience</span>
-              <span className="about-fact-value">2+ Years</span>
-            </div>
-            <div className="about-fact">
-              <span className="about-fact-label">Focus</span>
-              <span className="about-fact-value">Product Design</span>
-            </div>
-            <div className="about-fact">
-              <span className="about-fact-label">Status</span>
-              <span className="about-fact-value about-fact-value--status">
-                Available
-              </span>
-            </div>
-            <div className="about-fact">
-              <span className="about-fact-label">Email</span>
-              <span className="about-fact-value">
-                <a href="mailto:sophiaxuling@gmail.com">sophiaxuling@gmail.com</a>
-              </span>
-            </div>
-            <div className="about-fact">
-              <span className="about-fact-label">LinkedIn</span>
-              <span className="about-fact-value">
-                <a href="https://linkedin.com/in/sophia-x-ling">linkedin.com/in/sophia-x-ling</a>
-              </span>
-            </div>
-            <div className="about-fact">
-              <span className="about-fact-label">GitHub</span>
-              <span className="about-fact-value">
-                <a href="https://github.com/the-esoteric-girl">github.com/the-esoteric-girl</a>
-              </span>
+
+            <div className="about-links">
+              <a className="about-link" href="mailto:sophiaxuling@gmail.com">
+                <span className="about-link-label">Email</span>
+                <span className="about-link-value">sophiaxuling@gmail.com</span>
+                <span className="about-link-arrow">↗</span>
+              </a>
+              <a className="about-link" href="https://linkedin.com/in/sophia-x-ling"
+                 target="_blank" rel="noopener">
+                <span className="about-link-label">LinkedIn</span>
+                <span className="about-link-value">sophia-x-ling</span>
+                <span className="about-link-arrow">↗</span>
+              </a>
+              <a className="about-link" href="https://github.com/the-esoteric-girl"
+                 target="_blank" rel="noopener">
+                <span className="about-link-label">GitHub</span>
+                <span className="about-link-value">the-esoteric-girl</span>
+                <span className="about-link-arrow">↗</span>
+              </a>
             </div>
           </div>
 
@@ -119,37 +121,37 @@ function About() {
         <div className="about-personal">
           <Label variant="eyebrow">[ Beyond the Brief ]</Label>
           <div className="about-images-grid">
-            <div className="about-img-wrap about-img-wrap--tall">
+            <div className="about-img">
               <img
                 src="/img/thanksgiving.jpg"
                 alt="White buttercream cake with 'happy thanksgiving 2025' written on it and piped rosettes"
               />
             </div>
-            <div className="about-img-wrap">
+            <div className="about-img">
               <img
                 src="/img/strawberries.jpg"
                 alt="Chocolate-dipped strawberries with detailing"
               />
             </div>
-            <div className="about-img-wrap">
+            <div className="about-img">
               <img
                 src="/img/strawberrycake.jpg"
                 alt="Asian-style whipped cream chiffon cake with strawberries on top"
               />
             </div>
-            <div className="about-img-wrap">
+            <div className="about-img">
               <img
                 src="/img/purple.jpg"
                 alt="Purple buttercream cake with 'twenty one' written on top and star and flower detailing"
               />
             </div>
-            <div className="about-img-wrap">
+            <div className="about-img">
               <img
                 src="/img/personal-5.jpg"
                 alt="Workshop talk on accessibility"
               />
             </div>
-            <div className="about-img-wrap">
+            <div className="about-img">
               <img src="/img/fruittart.jpg" alt="Fruit tarts" />
             </div>
           </div>
