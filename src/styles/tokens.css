@@ -3,11 +3,11 @@
    All values consumed via CSS custom properties — never hardcode.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap");
 
 /* ── Primitive: Slate gray ramp ─────────────────────────────── */
 :root {
-  --slate-50:  #f1f3f5;
+  --slate-50: #f1f3f5;
   --slate-100: #e2e6ea;
   --slate-200: #c8d0d8;
   --slate-400: #8fa0b0;
@@ -16,7 +16,7 @@
   --slate-900: #1e2830;
 
   /* ── Primitive: Accent ramp ────────────────────────────────── */
-  --accent-50:  #eceafd;
+  --accent-50: #eceafd;
   --accent-100: #c5c0fa;
   --accent-200: #9d97f7;
   --accent-400: #584ff5;
@@ -24,33 +24,49 @@
   --accent-800: #1a14b0;
   --accent-900: #0d0a6b;
 
+  /* ── Primitive: Lavender ramp ──────────────────────────────── */
+  --lavender-50: #f0ebff;
+  --lavender-100: #d9cffa;
+  --lavender-200: #c4b5f5;
+  --lavender-400: #9b7fe8;
+  --lavender-600: #6e4fbf;
+  --lavender-800: #4a2d8a;
+  --lavender-900: #2d1660;
+
+  /* ── Primitive: Green ramp ─────────────────────────────────── */
+  --green-400: #4ade80;
+  --green-600: #16a34a;
+
   /* ── Semantic: Light mode defaults ────────────────────────── */
-  --color-bg:           var(--slate-50);
-  --color-surface:      #ffffff;
-  --color-border:       var(--slate-200);
+  --color-bg: var(--slate-50);
+  --color-surface: #ffffff;
+  --color-border: var(--slate-200);
   --color-text-primary: var(--slate-900);
-  --color-text-muted:   var(--slate-600);
+  --color-text-muted: var(--slate-600);
   --color-text-inverse: var(--slate-50);
-  --color-accent:       var(--accent-400);
+  --color-accent: var(--accent-400);
   --color-accent-hover: var(--accent-600);
-  --color-ink:          #0e0e11;
+  --color-ink: #0e0e11;
+  --color-secondary: var(--lavender-600);
+  --color-secondary-soft: var(--lavender-200);
+  --color-status: var(--green-600);
 
   /* ── Shadows: hard offset, zero blur ──────────────────────── */
-  --shadow-sm:        3px 3px 0px var(--color-ink);
-  --shadow-md:        5px 5px 0px var(--color-ink);
-  --shadow-lg:        8px 8px 0px var(--color-ink);
-  --shadow-pressed:   2px 2px 0px var(--color-ink);
+  --shadow-sm: 3px 3px 0px var(--color-ink);
+  --shadow-md: 5px 5px 0px var(--color-ink);
+  --shadow-lg: 8px 8px 0px var(--color-ink);
+  --shadow-pressed: 2px 2px 0px var(--color-ink);
   --shadow-accent-md: 5px 5px 0px var(--color-accent);
   --shadow-accent-lg: 8px 8px 0px var(--color-accent);
 
   /* ── Spacing: 4px base scale ───────────────────────────────── */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  20px;
-  --space-6:  24px;
-  --space-8:  32px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
@@ -59,59 +75,59 @@
   --space-32: 128px;
 
   /* ── Type scale ────────────────────────────────────────────── */
-  --text-xs:   11px;
-  --text-sm:   13px;
+  --text-xs: 11px;
+  --text-sm: 13px;
   --text-base: 16px;
-  --text-lg:   18px;
-  --text-xl:   20px;
-  --text-2xl:  24px;
-  --text-3xl:  32px;
-  --text-4xl:  40px;
-  --text-5xl:  56px;
-  --text-6xl:  80px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 40px;
+  --text-5xl: 56px;
+  --text-6xl: 80px;
 
   /* ── Font weights ──────────────────────────────────────────── */
   --weight-regular: 400;
-  --weight-medium:  500;
-  --weight-bold:    700;
+  --weight-medium: 500;
+  --weight-bold: 700;
 
   /* ── Font families ─────────────────────────────────────────── */
-  --font-heading: 'Geist', 'Geist Variable', sans-serif;
-  --font-body:    'Instrument Sans', sans-serif;
-  --font-mono:    'DM Mono', monospace;
+  --font-heading: "Geist", "Geist Variable", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
 
   /* ── Letter spacing ────────────────────────────────────────── */
-  --tracking-tight:  -0.02em;
-  --tracking-wide:    0.06em;
-  --tracking-wider:   0.12em;
+  --tracking-tight: -0.03em;
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.12em;
 
   /* ── Transitions ───────────────────────────────────────────── */
-  --ease-out:     cubic-bezier(0, 0, 0.2, 1);
-  --ease-snappy:  cubic-bezier(0.4, 0, 0.2, 1);
-  --duration-fast:  100ms;
-  --duration-base:  200ms;
-  --duration-slow:  350ms;
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-snappy: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 100ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
 
   /* ── Border radius ─────────────────────────────────────────── */
   --radius-none: 0px;
-  --radius-sm:   2px;
-  --radius-md:   4px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
   --radius-full: 9999px;
 
   /* ── Z-index scale ─────────────────────────────────────────── */
-  --z-below:   -1;
-  --z-base:     0;
-  --z-raised:   10;
+  --z-below: -1;
+  --z-base: 0;
+  --z-raised: 10;
   --z-dropdown: 100;
-  --z-sticky:   200;
-  --z-overlay:  300;
-  --z-modal:    400;
-  --z-toast:    500;
-  --z-cursor:   9999;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-cursor: 9999;
 
   /* ── Nav ───────────────────────────────────────────────────── */
   --nav-height: 64px;
-  --z-nav:      var(--z-sticky);
+  --z-nav: var(--z-sticky);
 
   /* ── Border shorthand ──────────────────────────────────────── */
   --border: 2px solid var(--color-border);
@@ -120,15 +136,18 @@
 /* ── Semantic: Dark mode overrides ──────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg:           #0e0e11;
-    --color-surface:      #1a1d22;
-    --color-border:       #2a3040;
+    --color-bg: #0e0e11;
+    --color-surface: #1a1d22;
+    --color-border: #2a3040;
     --color-text-primary: var(--slate-50);
-    --color-text-muted:   var(--slate-400);
+    --color-text-muted: var(--slate-400);
     --color-text-inverse: var(--slate-900);
-    --color-accent:       var(--accent-400);
+    --color-accent: var(--accent-400);
     --color-accent-hover: var(--accent-200);
-    --color-ink:          var(--slate-50);
+    --color-ink: var(--slate-50);
+    --color-secondary: var(--lavender-400);
+    --color-secondary-soft: var(--lavender-800);
+    --color-status: var(--green-400);
   }
 }
 
@@ -175,7 +194,12 @@ body {
 }
 
 /* ── Base type ─────────────────────────────────────────────── */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.1;
@@ -183,24 +207,48 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-primary);
 }
 
-h1 { font-size: var(--text-6xl); }
-h2 { font-size: var(--text-5xl); }
-h3 { font-size: var(--text-4xl); }
-h4 { font-size: var(--text-3xl); }
-h5 { font-size: var(--text-2xl); }
-h6 { font-size: var(--text-xl); }
+h1 {
+  font-size: var(--text-6xl);
+}
+h2 {
+  font-size: var(--text-5xl);
+}
+h3 {
+  font-size: var(--text-4xl);
+}
+h4 {
+  font-size: var(--text-3xl);
+}
+h5 {
+  font-size: var(--text-2xl);
+}
+h6 {
+  font-size: var(--text-xl);
+}
 
 /* ── Responsive type scale ─────────────────────────────────── */
 @media (max-width: 768px) {
-  h1 { font-size: var(--text-5xl); }
-  h2 { font-size: var(--text-4xl); }
-  h3 { font-size: var(--text-3xl); }
+  h1 {
+    font-size: var(--text-5xl);
+  }
+  h2 {
+    font-size: var(--text-4xl);
+  }
+  h3 {
+    font-size: var(--text-3xl);
+  }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: var(--text-4xl); }
-  h2 { font-size: var(--text-3xl); }
-  h3 { font-size: var(--text-2xl); }
+  h1 {
+    font-size: var(--text-4xl);
+  }
+  h2 {
+    font-size: var(--text-3xl);
+  }
+  h3 {
+    font-size: var(--text-2xl);
+  }
 }
 
 p {
@@ -213,7 +261,8 @@ a {
   text-decoration: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
