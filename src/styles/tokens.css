@@ -130,7 +130,8 @@
   --z-nav: var(--z-sticky);
 
   /* ── Border shorthand ──────────────────────────────────────── */
-  --border: 2px solid var(--color-border);
+  --border: 2px solid var(--color-ink);
+  --border-subtle: 1px solid var(--color-border);
 }
 
 /* ── Semantic: Dark mode overrides ──────────────────────────── */

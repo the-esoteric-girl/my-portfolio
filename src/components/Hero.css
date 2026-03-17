@@ -23,7 +23,7 @@
 
 /* ── Aside (decorative) ────────────────────────────────────── */
 .hero-aside {
-  border-left: var(--border);
+  border-left: var(--border-subtle);
 }
 
 /* ── Tag ───────────────────────────────────────────────────── */
@@ -139,7 +139,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: var(--border);
+  border-top: var(--border-subtle);
   padding: var(--space-4) var(--space-8);
 }
 
