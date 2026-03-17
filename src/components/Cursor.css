@@ -1,0 +1,58 @@
+.cursor-dot {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-ink);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot--click {
+  animation: dot-click var(--duration-base) var(--ease-out) forwards;
+}
+
+@keyframes dot-click {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(2.5); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.cursor-ring {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  transition:
+    width var(--duration-base) var(--ease-out),
+    height var(--duration-base) var(--ease-out),
+    background-color var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
+}
+
+.cursor-ring--hover {
+  width: 64px;
+  height: 64px;
+  background-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+  border-color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
