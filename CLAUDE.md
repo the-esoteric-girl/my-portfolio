@@ -53,6 +53,22 @@ Props: variant (primary|secondary|ghost|icon|destructive),
 size (sm|md|lg), as (button|a), href, disabled.
 Full styles in src/components/ui/Button.css.
 
+## Label rules
+
+Never write custom label/tag/pill styles in component CSS.
+Always use src/components/ui/Label.jsx.
+
+Props: variant (eyebrow|meta|pill|pill-accent|status|accent|counter|footer|nav),
+as (any HTML element).
+
+Usage examples:
+- `<Label variant="eyebrow">[ UX / UI Designer ]</Label>`
+- `<Label variant="pill">Figma</Label>`
+- `<Label variant="pill-accent">UX/UI</Label>`
+- `<Label variant="status">Available for work</Label>`
+- `<Label variant="accent">[ Outcomes ]</Label>`
+- `<Label variant="counter">[ 01 Case Studies ]</Label>`
+
 ## Component rules
 
 - One component per file

@@ -81,7 +81,7 @@
 }
 
 .btn--destructive {
-  background: #b91c1c;
+  background: var(--color-danger);
   color: var(--color-text-inverse);
 }
 

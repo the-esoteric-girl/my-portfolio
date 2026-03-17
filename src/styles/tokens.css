@@ -50,6 +50,7 @@
   --color-secondary: var(--lavender-600);
   --color-secondary-soft: var(--lavender-200);
   --color-status: var(--green-600);
+  --color-danger: #b91c1c;
 
   /* ── Shadows: hard offset, zero blur ──────────────────────── */
   --shadow-sm: 3px 3px 0px var(--color-ink);
@@ -149,6 +150,7 @@
     --color-secondary: var(--lavender-400);
     --color-secondary-soft: var(--lavender-800);
     --color-status: var(--green-400);
+    --color-danger: #ef4444;
   }
 }
 
