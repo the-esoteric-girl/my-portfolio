@@ -14,7 +14,7 @@ export default function CaseStudies() {
           <article className="case-study-card">
             <div className="case-study-image">
               <img
-                src="/images/consulta-thumbnail.png"
+                src="/img/consulta-thumbnail.png"
                 alt="Consulta Immigration Portal — before and after redesign"
               />
             </div>
