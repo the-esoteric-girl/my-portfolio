@@ -1,5 +1,5 @@
 function Skills() {
-  return null
+  return null;
 }
 
-export default Skills
+export default Skills;

@@ -1,15 +1,15 @@
-import './Label.css';
+import "./Label.css";
 
 export default function Label({
-  variant = 'meta',
-  as: Tag = 'span',
-  className = '',
+  variant = "meta",
+  as: Tag = "span",
+  className = "",
   children,
   ...props
 }) {
   return (
     <Tag
-      className={`label label--${variant}${className ? ` ${className}` : ''}`}
+      className={`label label--${variant}${className ? ` ${className}` : ""}`}
       {...props}
     >
       {children}

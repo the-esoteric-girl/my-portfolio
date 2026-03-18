@@ -108,8 +108,12 @@
 }
 
 /* ── cs-hero accent overrides (always dark bg — needs higher contrast tokens) */
-.cs-hero .cs-stat-value--accent { color: var(--accent-200); }
-.cs-hero .label--eyebrow { color: var(--slate-400); }
+.cs-hero .cs-stat-value--accent {
+  color: var(--accent-200);
+}
+.cs-hero .label--eyebrow {
+  color: var(--slate-400);
+}
 
 /* ── Body grid ───────────────────────────────────────────── */
 .cs-body {
@@ -357,8 +361,12 @@
 }
 
 @keyframes lightbox-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .cs-lightbox-img {
@@ -389,7 +397,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cs-lightbox { animation: none; }
+  .cs-lightbox {
+    animation: none;
+  }
 }
 
 /* ── Responsive ──────────────────────────────────────────── */

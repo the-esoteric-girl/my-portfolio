@@ -36,10 +36,6 @@ function About() {
 
             <div className="about-facts">
               <div className="about-fact">
-                <span className="about-fact-label">Experience</span>
-                <span className="about-fact-value">2+ Years</span>
-              </div>
-              <div className="about-fact">
                 <span className="about-fact-label">Focus</span>
                 <span className="about-fact-value">Product Design</span>
               </div>

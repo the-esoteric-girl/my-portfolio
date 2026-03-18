@@ -22,7 +22,9 @@ export default function CaseStudies() {
         <div className="case-studies-more">
           <Link to="/work" className="case-studies-more-link">
             See All Work
-            <span className="case-studies-more-arrow" aria-hidden="true">↓</span>
+            <span className="case-studies-more-arrow" aria-hidden="true">
+              ↓
+            </span>
           </Link>
         </div>
       </div>

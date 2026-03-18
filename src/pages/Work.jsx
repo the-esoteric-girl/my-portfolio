@@ -12,7 +12,8 @@ export default function Work() {
           <Label variant="counter">[ Work ]</Label>
           <h1 id="work-title">Case Studies</h1>
           <p className="work-desc">
-            Selected projects — end-to-end design work across product, systems, and experience.
+            Selected projects — end-to-end design work across product, systems,
+            and experience.
           </p>
         </div>
       </section>

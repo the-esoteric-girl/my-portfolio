@@ -925,7 +925,7 @@ export default function CaseStudy() {
               ✕
             </button>
           </div>,
-          document.body
+          document.body,
         )}
     </main>
   );

@@ -85,7 +85,9 @@
   cursor: none;
   box-shadow: var(--shadow-sm);
   border-radius: 0;
-  transition: box-shadow var(--duration-fast), transform var(--duration-fast);
+  transition:
+    box-shadow var(--duration-fast),
+    transform var(--duration-fast);
   flex-shrink: 0;
 }
 

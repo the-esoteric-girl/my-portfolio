@@ -51,9 +51,13 @@ function Nav() {
           {NAV_LINKS.map(({ label, href, anchor }) => (
             <li key={label}>
               {href ? (
-                <Link to={href} className="nav-link">{label}</Link>
+                <Link to={href} className="nav-link">
+                  {label}
+                </Link>
               ) : (
-                <a href={linkHref(anchor)} className="nav-link">{label}</a>
+                <a href={linkHref(anchor)} className="nav-link">
+                  {label}
+                </a>
               )}
             </li>
           ))}
@@ -98,9 +102,21 @@ function Nav() {
           {NAV_LINKS.map(({ label, href, anchor }) => (
             <li key={label}>
               {href ? (
-                <Link to={href} className="nav-overlay-link" onClick={closeMenu}>{label}</Link>
+                <Link
+                  to={href}
+                  className="nav-overlay-link"
+                  onClick={closeMenu}
+                >
+                  {label}
+                </Link>
               ) : (
-                <a href={linkHref(anchor)} className="nav-overlay-link" onClick={closeMenu}>{label}</a>
+                <a
+                  href={linkHref(anchor)}
+                  className="nav-overlay-link"
+                  onClick={closeMenu}
+                >
+                  {label}
+                </a>
               )}
             </li>
           ))}

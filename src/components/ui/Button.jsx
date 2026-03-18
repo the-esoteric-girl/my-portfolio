@@ -1,9 +1,9 @@
-import './Button.css';
+import "./Button.css";
 
 export default function Button({
-  variant = 'primary',
-  size = 'md',
-  as = 'button',
+  variant = "primary",
+  size = "md",
+  as = "button",
   href,
   disabled = false,
   onClick,
@@ -11,20 +11,16 @@ export default function Button({
   className,
   ...rest
 }) {
-  const classes = [
-    'btn',
-    `btn--${variant}`,
-    `btn--${size}`,
-    className,
-  ]
+  const classes = ["btn", `btn--${variant}`, `btn--${size}`, className]
     .filter(Boolean)
-    .join(' ');
+    .join(" ");
 
-  if (as !== 'button') {
+  if (as !== "button") {
     const Component = as;
-    const linkProps = typeof as === 'string'
-      ? { href: disabled ? undefined : href }
-      : { to: disabled ? undefined : href };
+    const linkProps =
+      typeof as === "string"
+        ? { href: disabled ? undefined : href }
+        : { to: disabled ? undefined : href };
     return (
       <Component
         {...linkProps}
@@ -40,12 +36,7 @@ export default function Button({
   }
 
   return (
-    <button
-      className={classes}
-      disabled={disabled}
-      onClick={onClick}
-      {...rest}
-    >
+    <button className={classes} disabled={disabled} onClick={onClick} {...rest}>
       {children}
     </button>
   );
