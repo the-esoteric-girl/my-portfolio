@@ -3,8 +3,6 @@
    All values consumed via CSS custom properties — never hardcode.
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap");
-
 /* ── Primitive: Slate gray ramp ─────────────────────────────── */
 :root {
   --slate-50: #f1f3f5;
