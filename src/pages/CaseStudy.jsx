@@ -222,6 +222,12 @@ export default function CaseStudy() {
               A portal that needed to work as hard as the people using it.
             </h2>
             <p>
+              For immigrants navigating the US legal system, confusion isn't
+              just frustrating — it has real consequences. Consulta's portal was
+              creating that confusion at every step, and attorneys were paying
+              for it in support queues instead of legal work.
+            </p>
+            <p>
               Consulta Immigration is an AI-powered legal tech startup helping
               immigrants navigate the US immigration process. When I joined as
               the sole designer, their client portal was functional but broken —
@@ -323,25 +329,22 @@ export default function CaseStudy() {
               day one and knew exactly where people were getting stuck.
             </p>
             <p>
-              I started by synthesizing that feedback into patterns. The
-              complaints weren't random — they clustered around the same moments
-              in the flow, the same types of confusion, the same missing pieces.
-              That consistency told me the problems were structural, not
-              incidental.
+              I started with a heuristic evaluation and full UI/UX audit of the
+              existing portal — a structured assessment against established
+              usability principles. It surfaced measurable failures: contrast
+              ratios below WCAG standards, font sizes too small for comfortable
+              reading, no consistent visual language across screens. The
+              cofounder feedback confirmed the same patterns. The complaints
+              clustered around the same moments in the flow, the same types of
+              confusion. That consistency told me the problems were structural,
+              not incidental.
             </p>
             <p>
               I also looked at how comparable platforms handled the same
-              challenges. Boundless, one of the stronger players in the
-              immigration tech space, showed a clear pattern: successful
-              platforms use progressive disclosure to manage complexity,
-              explicit step indicators to reduce orientation anxiety, and
-              unambiguous calls to action at every decision point. None of those
-              things existed in Consulta's portal.
-            </p>
-            <p>
-              Because formal usability testing wasn't available in the early
-              phase, I anchored the work to WCAG 2.1 AA and the federal
-              plain-language standard.
+              challenges. Boundless showed a clear pattern: progressive
+              disclosure to manage complexity, explicit step indicators to
+              reduce orientation anxiety, unambiguous calls to action at every
+              decision point. None of those things existed in Consulta's portal.
             </p>
             <p>
               From that research I defined three design principles that would
@@ -465,9 +468,10 @@ export default function CaseStudy() {
               </div>
 
               <p>
-                The result was a meaningful reduction in time-on-screen for this
-                step and a near-elimination of the wrong-form selection error
-                that was appearing in internal testing.
+                After the redesign, users stopped routing through the chatbot
+                and clicked directly into the questionnaire. A navigation
+                problem that looked like user error turned out to be a design
+                failure — and the fix proved it.
               </p>
             </div>
 
@@ -480,9 +484,7 @@ export default function CaseStudy() {
                 answer. The original design made it harder than it needed to be.
                 Font sizes were too small, contrast failed accessibility
                 standards, and the dense layout gave users no visual breathing
-                room between questions. The progress bar at the top was a string
-                of tiny dots that communicated nothing useful about how far
-                along you were or how much remained.
+                room between questions.
               </p>
               <p>
                 Navigation made it worse — back and next arrows were positioned
@@ -525,10 +527,10 @@ export default function CaseStudy() {
               </div>
 
               <p>
-                Question types were standardized into a component library —
-                short text, long text, date, multiple choice, yes/no with
-                context expansion — with distinct visual treatment for each
-                state: unanswered, in progress, answered, flagged.
+                Drop-off through the questionnaire decreased and support
+                questions fell. Giving users orientation, breathing room, and
+                navigation that followed their natural flow made a long,
+                high-stakes form feel completable.
               </p>
             </div>
 
@@ -578,10 +580,11 @@ export default function CaseStudy() {
               </div>
 
               <p>
-                Particular attention went to the empty state — the first time a
-                user sees the checklist should orient them, not overwhelm them.
-                Seeing a long list of required documents with no context is one
-                of the fastest paths to abandonment.
+                Stalled applications and support questions both dropped. Users
+                had been uploading documents and waiting for review instead of
+                submitting — not because they weren't paying attention, but
+                because the design never made the intended flow clear. Once it
+                did, they followed it.
               </p>
             </div>
 
@@ -637,10 +640,8 @@ export default function CaseStudy() {
               </div>
 
               <p>
-                The filing fee screen showed the sharpest conversion improvement
-                of any screen in the redesign — consistent with the principle
-                that anxiety about payment is primarily anxiety about the
-                unknown.
+                Fewer users reached out with questions about fees or payment
+                options.
               </p>
             </div>
 
@@ -696,9 +697,9 @@ export default function CaseStudy() {
               </div>
 
               <p>
-                Making the last step feel intentional rather than incidental was
-                the point. The signature screen is where the user commits — the
-                design should make that moment feel earned.
+                Support tickets about signing decreased. Users were failing
+                because the design was sending them in the wrong order. Fixing
+                the sequence fixed the problem.
               </p>
             </div>
           </section>
