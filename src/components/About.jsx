@@ -30,6 +30,7 @@ function About() {
                 src="/img/sophia.jpg"
                 alt="Sophia Ling, UX/UI designer"
                 className="about-photo"
+                loading="lazy"
               />
             </div>
 
@@ -137,31 +138,37 @@ function About() {
               className="about-img"
               src="/img/thanksgiving.jpg"
               alt="White buttercream cake with 'happy thanksgiving 2025' written on it and piped rosettes"
+              loading="lazy"
             />
             <img
               className="about-img"
               src="/img/strawberries.jpg"
               alt="Chocolate-dipped strawberries with detailing"
+              loading="lazy"
             />
             <img
               className="about-img"
               src="/img/strawberrycake.jpg"
               alt="Asian-style whipped cream chiffon cake with strawberries on top"
+              loading="lazy"
             />
             <img
               className="about-img"
               src="/img/purple.jpg"
               alt="Purple buttercream cake with 'twenty one' written on top and star and flower detailing"
+              loading="lazy"
             />
             <img
               className="about-img"
               src="/img/astronaut.jpg"
               alt="Watercolor painting of astronaut in space"
+              loading="lazy"
             />
             <img
               className="about-img"
               src="/img/fruittart.jpg"
               alt="Fruit tarts"
+              loading="lazy"
             />
           </div>
         </div>

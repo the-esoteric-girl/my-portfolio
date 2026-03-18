@@ -44,16 +44,22 @@ function scrambleName(h1) {
     letterIndex++;
 
     for (let f = 0; f < FRAME_COUNT; f++) {
-      const id = setTimeout(() => {
-        span.textContent =
-          SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
-      }, start + f * FRAME_DURATION);
+      const id = setTimeout(
+        () => {
+          span.textContent =
+            SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+        },
+        start + f * FRAME_DURATION,
+      );
       ids.push(id);
     }
 
-    const resolveId = setTimeout(() => {
-      span.textContent = char;
-    }, start + FRAME_COUNT * FRAME_DURATION);
+    const resolveId = setTimeout(
+      () => {
+        span.textContent = char;
+      },
+      start + FRAME_COUNT * FRAME_DURATION,
+    );
     ids.push(resolveId);
   });
 
@@ -73,7 +79,7 @@ function Hero() {
   return (
     <section className="hero" aria-label="Introduction" id="top">
       <div className="hero-content">
-        <span className="hero-tag">[ UX / UI DESIGNER ]</span>
+        <span className="hero-tag">[ SEATTLE, WA ]</span>
         <h1 className="hero-name" ref={nameRef} aria-label="Sophia Ling.">
           Sophia
           <br />
@@ -101,10 +107,7 @@ function Hero() {
 
       <div className="hero-bar-meta">
         <div className="hero-bar-status">Available for work</div>
-        <span className="hero-bar-location">
-          <span className="hero-bar-location-full">Seattle, WA</span>
-          <span className="hero-bar-location-short">Seattle, WA</span>
-        </span>
+
         <span className="hero-bar-scroll">↓ Scroll to explore</span>
       </div>
 

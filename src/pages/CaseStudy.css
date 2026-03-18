@@ -324,12 +324,68 @@
   box-shadow: var(--shadow-md);
   overflow: hidden;
   background: var(--color-surface);
+  cursor: pointer;
+  transition: opacity var(--duration-fast);
+}
+
+.cs-ba-img:hover {
+  opacity: 0.85;
 }
 
 .cs-ba-img img {
   width: 100%;
   display: block;
   height: auto;
+}
+
+/* ── Lightbox ────────────────────────────────────────────── */
+.cs-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 14, 17, 0.92);
+  z-index: calc(var(--z-cursor) - 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  cursor: pointer;
+  animation: lightbox-in 200ms var(--ease-out) forwards;
+}
+
+@keyframes lightbox-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cs-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: var(--border);
+  box-shadow: var(--shadow-xl);
+  cursor: default;
+  display: block;
+}
+
+.cs-lightbox-close {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 40px;
+  height: 40px;
+  border: var(--border);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-lightbox { animation: none; }
 }
 
 /* ── Responsive ──────────────────────────────────────────── */

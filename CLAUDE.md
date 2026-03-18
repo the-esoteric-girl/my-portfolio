@@ -113,6 +113,33 @@ Internal anchor links (same page scroll):
 - Active/current: var(--color-accent)
 - Never use ↗ on internal links
 
+## Images
+
+- All img tags below the fold: loading="lazy" decoding="async"
+- First visible image on page load: loading="eager"
+- All images: include descriptive alt text, never empty
+  unless purely decorative
+- Case study images: always clickable with lightbox
+  (use the existing lightbox pattern in CaseStudy.jsx)
+- Format: WebP preferred over PNG/JPG for screenshots
+- Always specify width and height attributes to prevent
+  layout shift
+
+## Page transitions
+
+- All new pages automatically get the fade+slide transition
+  via the PageTransition wrapper in App.jsx
+- Wrap any new <Route> inside the existing
+  <PageTransition> component — never create a page
+  outside of it
+
+## Performance
+
+- Never import heavy libraries without flagging it first
+- Use IntersectionObserver for scroll-triggered effects,
+  never scroll event listeners
+- Prefer CSS animations over JS animations where possible
+
 ## Commits
 
 feat: / fix: / style: / chore:

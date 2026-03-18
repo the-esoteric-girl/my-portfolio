@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Button from "../components/ui/Button";
 import Label from "../components/ui/Label";
 import Footer from "../components/Footer";
@@ -49,6 +50,7 @@ const ALL_OBSERVE_IDS = [
 
 export default function CaseStudy() {
   const [activeId, setActiveId] = useState("overview");
+  const [lightbox, setLightbox] = useState(null);
   const sidebarRef = useRef(null);
   const userScrollingTocRef = useRef(false);
   const userScrollTimeoutRef = useRef(null);
@@ -117,7 +119,31 @@ export default function CaseStudy() {
     return () => document.removeEventListener("click", handleClick);
   }, []);
 
+  /* ── Lightbox: close on Escape ───────────────────────────── */
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, []);
+
+  /* ── Lightbox: lock body scroll ──────────────────────────── */
+  useEffect(() => {
+    document.body.style.overflow = lightbox !== null ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [lightbox]);
+
   const isActive = (id) => activeId === id || SUB_PARENT[activeId] === id;
+
+  const openLightbox = (e) => {
+    if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
+    if (e.type === "keydown") e.preventDefault();
+    const img = e.currentTarget.querySelector("img");
+    if (img) setLightbox(img.src);
+  };
 
   return (
     <main className="case-study-page">
@@ -448,19 +474,37 @@ export default function CaseStudy() {
                 <div className="cs-ba-grid">
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">Before</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/app-selection-web-before.png"
                         alt="Application selection screen before redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">After</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/app-selection-web.png"
                         alt="Application selection screen after redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -507,19 +551,37 @@ export default function CaseStudy() {
                 <div className="cs-ba-grid">
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">Before</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/questionnaire-web-before.png"
                         alt="Questionnaire screen before redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">After</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/questionnaire-web.png"
                         alt="Questionnaire screen after redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -560,19 +622,37 @@ export default function CaseStudy() {
                 <div className="cs-ba-grid">
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">Before</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/checklist-web-before.png"
                         alt="Documentation checklist before redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">After</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/checklist-web.png"
                         alt="Documentation checklist after redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -620,19 +700,37 @@ export default function CaseStudy() {
                 <div className="cs-ba-grid">
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">Before</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/fee-web-before.png"
                         alt="Filing fee screen before redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">After</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/fee-web-after.png"
                         alt="Filing fee screen after redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -677,19 +775,37 @@ export default function CaseStudy() {
                 <div className="cs-ba-grid">
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">Before</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/signature-web-before.png"
                         alt="Signature page before redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
                   <div className="cs-ba-col">
                     <span className="cs-ba-label">After</span>
-                    <div className="cs-ba-img">
+                    <div
+                      className="cs-ba-img"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Click to enlarge"
+                      onClick={openLightbox}
+                      onKeyDown={openLightbox}
+                    >
                       <img
                         src="/img/case-studies/signature-web-after.png"
                         alt="Signature page after redesign"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -785,6 +901,32 @@ export default function CaseStudy() {
         </div>
       </div>
       <Footer />
+
+      {lightbox !== null &&
+        createPortal(
+          <div
+            className="cs-lightbox"
+            onClick={() => setLightbox(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Image lightbox"
+          >
+            <img
+              src={lightbox}
+              alt="Enlarged case study screenshot"
+              className="cs-lightbox-img"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              className="cs-lightbox-close"
+              onClick={() => setLightbox(null)}
+              aria-label="Close lightbox"
+            >
+              ✕
+            </button>
+          </div>,
+          document.body
+        )}
     </main>
   );
 }
