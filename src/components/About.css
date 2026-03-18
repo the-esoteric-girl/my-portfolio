@@ -163,6 +163,7 @@
   color: var(--color-accent);
   text-align: right;
   font-size: var(--text-xs);
+  overflow-wrap: break-word;
 }
 
 .about-link-arrow {
@@ -275,6 +276,10 @@
 /* ── Responsive: ≤ 768px ────────────────────────────────── */
 
 @media (max-width: 768px) {
+  .about-link {
+    min-height: 44px;
+  }
+
   .about-detail {
     grid-template-columns: 1fr;
     gap: var(--space-10);

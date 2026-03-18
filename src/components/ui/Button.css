@@ -114,6 +114,13 @@
   color: var(--color-always-dark);
 }
 
+/* ── Mobile touch target: sm buttons need minimum 44px hit area ── */
+@media (max-width: 767px) {
+  .btn--sm {
+    min-height: 44px;
+  }
+}
+
 /* ── Reduced motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .btn {

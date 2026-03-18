@@ -55,6 +55,11 @@ export default function CaseStudy() {
   const userScrollingTocRef = useRef(false);
   const userScrollTimeoutRef = useRef(null);
 
+  /* ── Cleanup pending TOC scroll-pause timeout on unmount ─── */
+  useEffect(() => {
+    return () => clearTimeout(userScrollTimeoutRef.current);
+  }, []);
+
   /* ── Auto-scroll sidebar to keep active item visible ─────── */
   useEffect(() => {
     const sidebar = sidebarRef.current;
@@ -76,6 +81,7 @@ export default function CaseStudy() {
   };
 
   /* ── IntersectionObserver — active TOC item ──────────────── */
+  // Runs once on mount — observed elements are static; no dep needed
   useEffect(() => {
     const els = ALL_OBSERVE_IDS.map((id) => document.getElementById(id)).filter(
       Boolean,
@@ -95,6 +101,7 @@ export default function CaseStudy() {
   }, []);
 
   /* ── Smooth scroll with nav offset ───────────────────────── */
+  // Runs once on mount — delegated click handler, no deps required
   useEffect(() => {
     const handleClick = (e) => {
       const anchor = e.target.closest("a[href^='#']");
@@ -120,6 +127,7 @@ export default function CaseStudy() {
   }, []);
 
   /* ── Lightbox: close on Escape ───────────────────────────── */
+  // Runs once on mount — setLightbox is a stable setState reference
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === "Escape") setLightbox(null);

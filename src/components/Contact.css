@@ -70,6 +70,7 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--space-3) 0;
+  overflow-wrap: break-word;
   border-top: var(--border-subtle);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -87,7 +88,7 @@
 
 .contact-link span {
   color: var(--color-text-muted);
-  font-size: 9px;
+  font-size: var(--text-xs);
 }
 
 .contact-link:hover {
@@ -129,7 +130,7 @@
 
 .contact-field-optional {
   color: var(--color-text-muted);
-  font-size: 9px;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wider);
 }
@@ -180,7 +181,7 @@
 
 .contact-success {
   border: var(--border);
-  box-shadow: 8px 8px 0 var(--color-accent);
+  box-shadow: var(--shadow-accent-lg);
   padding: var(--space-8);
   background: var(--color-surface);
   display: flex;
@@ -233,5 +234,9 @@
 
   .contact-right {
     padding-left: 0;
+  }
+
+  .contact-link {
+    min-height: 44px;
   }
 }

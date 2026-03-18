@@ -69,6 +69,7 @@ function scrambleName(h1) {
 function Hero() {
   const nameRef = useRef(null);
 
+  // Runs once on mount — scramble effect fires only at initial render
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const h1 = nameRef.current;

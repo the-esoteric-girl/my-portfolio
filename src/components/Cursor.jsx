@@ -8,9 +8,17 @@ function Cursor() {
   const ringPos = useRef({ x: -100, y: -100 });
   const rafId = useRef(null);
 
+  // Runs once on mount — registers global mouse listeners and rAF loop
   useEffect(() => {
     const dot = dotRef.current;
     const ring = ringRef.current;
+
+    // Skip entirely on touch-only devices; CSS already hides the elements,
+    // but we also skip the listeners to avoid unnecessary overhead.
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      document.body.style.cursor = "auto";
+      return;
+    }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       dot.style.display = "none";

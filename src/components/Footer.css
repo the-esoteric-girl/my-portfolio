@@ -30,7 +30,7 @@
 
 .footer-copy {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -79,6 +79,10 @@
 
   .footer-links {
     margin-top: var(--space-2);
+  }
+
+  .footer-link {
+    min-height: 44px;
   }
 
   .footer-link:first-child {

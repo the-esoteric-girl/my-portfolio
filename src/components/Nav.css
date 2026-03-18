@@ -75,6 +75,7 @@
 .nav-theme-toggle {
   width: 32px;
   height: 32px;
+  position: relative;
   border: var(--border);
   background: transparent;
   color: var(--color-text-primary);
@@ -89,6 +90,13 @@
     box-shadow var(--duration-fast),
     transform var(--duration-fast);
   flex-shrink: 0;
+}
+
+/* Expand touch target to 44×44 without changing visual size */
+.nav-theme-toggle::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
 }
 
 .nav-theme-toggle:hover {
@@ -123,6 +131,14 @@
   border: none;
   cursor: none;
   gap: 5px;
+  position: relative;
+}
+
+/* Expand touch target to 44×44 without changing visual size */
+.nav-hamburger::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
 }
 
 .nav-hamburger:focus-visible {
@@ -158,8 +174,8 @@
   position: absolute;
   top: var(--space-4);
   right: var(--space-6);
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   font-size: 18px;
