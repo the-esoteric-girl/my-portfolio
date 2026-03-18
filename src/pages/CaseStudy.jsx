@@ -135,7 +135,7 @@ export default function CaseStudy() {
           </Button>
 
           <div className="cs-hero-content">
-            <Label variant="eyebrow">[ Case Study — 2025 ]</Label>
+            <Label variant="eyebrow">[ UI/UX REDESIGN ]</Label>
             <h1>Consulta Immigration Portal Redesign</h1>
             <p className="cs-hero-desc">
               Full-cycle redesign of an AI-powered immigration platform. Real
@@ -436,8 +436,8 @@ export default function CaseStudy() {
                 proceed, when the answer was a single click.
               </p>
               <p>
-                I restructured the page around a single clear question: _What
-                kind of application are you filing?_ Application type cards
+                I restructured the page around a single clear question: What
+                kind of application are you filing? Application type cards
                 became the primary element — larger, icon-led, impossible to
                 miss. The chatbot moved to a persistent but unobtrusive position
                 in the corner. A tab system between Family and Business

@@ -61,6 +61,7 @@
 
 /* Pills on dark bg */
 .cs-hero-tags .label--pill {
+  background: var(--slate-900);
   border-color: var(--slate-700);
   color: var(--slate-400);
 }
