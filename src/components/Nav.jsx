@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import "./Nav.css";
 
 const NAV_LINKS = [
-  { label: "Work", anchor: "work" },
+  { label: "Work", href: "/work" },
   { label: "About", anchor: "about" },
   { label: "Contact", anchor: "contact" },
 ];
@@ -48,11 +48,13 @@ function Nav() {
         </a>
 
         <ul className="nav-links" role="list">
-          {NAV_LINKS.map(({ label, anchor }) => (
-            <li key={anchor}>
-              <a href={linkHref(anchor)} className="nav-link">
-                {label}
-              </a>
+          {NAV_LINKS.map(({ label, href, anchor }) => (
+            <li key={label}>
+              {href ? (
+                <Link to={href} className="nav-link">{label}</Link>
+              ) : (
+                <a href={linkHref(anchor)} className="nav-link">{label}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -93,11 +95,13 @@ function Nav() {
           ✕
         </button>
         <ul className="nav-overlay-links" role="list">
-          {NAV_LINKS.map(({ label, anchor }) => (
-            <li key={anchor}>
-              <a href={linkHref(anchor)} className="nav-overlay-link" onClick={closeMenu}>
-                {label}
-              </a>
+          {NAV_LINKS.map(({ label, href, anchor }) => (
+            <li key={label}>
+              {href ? (
+                <Link to={href} className="nav-overlay-link" onClick={closeMenu}>{label}</Link>
+              ) : (
+                <a href={linkHref(anchor)} className="nav-overlay-link" onClick={closeMenu}>{label}</a>
+              )}
             </li>
           ))}
         </ul>

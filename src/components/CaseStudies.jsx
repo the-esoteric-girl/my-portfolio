@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import Button from "./ui/Button";
 import Label from "./ui/Label";
+import CaseStudyCard from "./ui/CaseStudyCard";
+import CASE_STUDIES from "../data/caseStudies";
 import "./CaseStudies.css";
+
+const FEATURED = CASE_STUDIES.filter((s) => s.featured);
 
 export default function CaseStudies() {
   return (
@@ -12,51 +15,15 @@ export default function CaseStudies() {
           <Label variant="counter">[ 01 Case Studies ]</Label>
         </div>
         <div className="case-studies-grid">
-          <article className="case-study-card">
-            <div className="case-study-image">
-              <img
-                src="/img/consulta-thumbnail.png"
-                alt="Consulta Immigration Portal — before and after redesign"
-              />
-            </div>
-            <div className="case-study-body">
-              <div className="case-study-top">
-                <Label variant="meta">Sole Designer — 7 Months — 2025</Label>
-                <h3>Consulta Immigration Portal Redesign</h3>
-                <p>
-                  Full-cycle redesign of an AI-powered immigration platform.
-                  Real users, real stakes — immigrants navigating the US
-                  immigration process.
-                </p>
-                <div className="case-study-outcomes">
-                  <Label variant="accent">[ Outcomes ]</Label>
-                  <p>
-                    Support questions dropped. Users reported significantly less
-                    confusion. Shipped to real users before company closure in
-                    Oct 2025.
-                  </p>
-                </div>
-              </div>
-              <div className="case-study-bottom">
-                <div className="case-study-pills">
-                  <Label variant="pill-accent">UX/UI</Label>
-                  <Label variant="pill">Figma</Label>
-                  <Label variant="pill">Accessibility</Label>
-                  <Label variant="pill">Design Systems</Label>
-                </div>
-                <div className="case-study-footer">
-                  <Button
-                    variant="secondary"
-                    size="md"
-                    as={Link}
-                    href="/case-studies/consulta"
-                  >
-                    View Case Study →
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </article>
+          {FEATURED.map((study) => (
+            <CaseStudyCard key={study.slug} study={study} />
+          ))}
+        </div>
+        <div className="case-studies-more">
+          <Link to="/work" className="case-studies-more-link">
+            See All Work
+            <span className="case-studies-more-arrow" aria-hidden="true">↓</span>
+          </Link>
         </div>
       </div>
     </section>
