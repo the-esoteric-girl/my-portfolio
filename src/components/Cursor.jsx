@@ -25,6 +25,16 @@ function Cursor() {
       dot.style.top = e.clientY + "px";
     }
 
+    function onMouseLeave() {
+      dot.style.opacity = "0";
+      ring.style.opacity = "0";
+    }
+
+    function onMouseEnter() {
+      dot.style.opacity = "1";
+      ring.style.opacity = "1";
+    }
+
     function onMouseOver(e) {
       const isPointer = e.target.closest('a, button, [data-cursor="pointer"]');
       ring.classList.toggle("cursor-ring--hover", !!isPointer);
@@ -50,6 +60,8 @@ function Cursor() {
     document.addEventListener("mouseover", onMouseOver);
     document.addEventListener("mousedown", onMouseDown);
     dot.addEventListener("animationend", onAnimationEnd);
+    document.documentElement.addEventListener("mouseleave", onMouseLeave);
+    document.documentElement.addEventListener("mouseenter", onMouseEnter);
     rafId.current = requestAnimationFrame(animate);
 
     return () => {
@@ -57,6 +69,8 @@ function Cursor() {
       document.removeEventListener("mouseover", onMouseOver);
       document.removeEventListener("mousedown", onMouseDown);
       dot.removeEventListener("animationend", onAnimationEnd);
+      document.documentElement.removeEventListener("mouseleave", onMouseLeave);
+      document.documentElement.removeEventListener("mouseenter", onMouseEnter);
       cancelAnimationFrame(rafId.current);
     };
   }, []);
