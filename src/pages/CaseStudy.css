@@ -85,10 +85,10 @@
 
 .cs-stat label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--slate-600);
+  color: var(--slate-400);
   display: block;
   margin-bottom: var(--space-1);
 }
@@ -106,6 +106,10 @@
 .cs-stat-value--accent {
   color: var(--color-accent);
 }
+
+/* ── cs-hero accent overrides (always dark bg — needs higher contrast tokens) */
+.cs-hero .cs-stat-value--accent { color: var(--accent-200); }
+.cs-hero .label--eyebrow { color: var(--slate-400); }
 
 /* ── Body grid ───────────────────────────────────────────── */
 .cs-body {

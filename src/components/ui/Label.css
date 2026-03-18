@@ -77,6 +77,17 @@ a.label--footer:hover {
   text-underline-offset: 3px;
 }
 
+/* ── Dark mode overrides ─────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .label--pill-accent {
+    color: var(--color-always-dark);
+  }
+}
+
+:root[data-theme="dark"] .label--pill-accent {
+  color: var(--color-always-dark);
+}
+
 .label--nav {
   font-size: var(--text-sm);
   color: var(--color-text-primary);

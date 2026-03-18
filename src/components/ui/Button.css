@@ -103,6 +103,17 @@
   outline-offset: 3px;
 }
 
+/* ── Dark mode overrides ───────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .btn--primary {
+    color: var(--color-always-dark);
+  }
+}
+
+:root[data-theme="dark"] .btn--primary {
+  color: var(--color-always-dark);
+}
+
 /* ── Reduced motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .btn {

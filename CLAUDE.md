@@ -60,6 +60,7 @@ Props: variant (eyebrow|meta|pill|pill-accent|status|accent|counter|footer|nav),
 as (any HTML element).
 
 Usage examples:
+
 - `<Label variant="eyebrow">[ UX / UI Designer ]</Label>`
 - `<Label variant="pill">Figma</Label>`
 - `<Label variant="pill-accent">UX/UI</Label>`
@@ -89,6 +90,9 @@ Usage examples:
 - All sections have aria-label or a visible heading
 - All images have alt text
 - prefers-reduced-motion respected on every animation
+- Never use font-size below var(--text-xs) (11px)
+  for any visible text. 9px text fails WCAG AA at
+  almost any color combination.
 
 ## Never
 
@@ -102,13 +106,15 @@ Usage examples:
 ## Link rules
 
 External links (opening new tab):
+
 - Always color: var(--color-accent)
 - Always append ↗ symbol
-- Always target="_blank" rel="noopener noreferrer"
+- Always target="\_blank" rel="noopener noreferrer"
 - Hover: text-decoration underline, text-underline-offset 3px
 - Font: inherit from parent — never override font-family on links
 
 Internal anchor links (same page scroll):
+
 - Color: var(--color-text-primary) by default
 - Active/current: var(--color-accent)
 - Never use ↗ on internal links
