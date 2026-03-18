@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
 import Work from "./pages/Work";
 import PageTransition from "./components/PageTransition";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,6 +48,7 @@ function App() {
           <Route path="/case-studies/consulta" element={<CaseStudy />} />
         </Routes>
       </PageTransition>
+      <Analytics />
     </BrowserRouter>
   );
 }
