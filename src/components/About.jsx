@@ -18,7 +18,7 @@ function About() {
           <span className="about-statement-accent">
             technology and human behavior
           </span>{" "}
-          — asking not just how it works, but how it shapes us.
+          — asking not just how we shape technology, but how it shapes us.
         </p>
 
         {/* Detail: photo col + bio col */}
@@ -85,26 +85,27 @@ function About() {
             <div className="about-bio-content">
               <Label variant="eyebrow">[ Background ]</Label>
               <p>
-                I grew up with technology but remember when it was
-                supplementary, not essential. That in-between position shapes
-                how I think about design — I'm obsessed with understanding how
-                interfaces shape behavior, attention, and culture, not just
-                whether they're usable.
-              </p>
-              <p>
                 I studied Human-Centered Design and Engineering at UW, and have
                 spent the last year designing AI products at two startups —
                 leading the full redesign of an immigration platform as sole
                 designer, and working as a UI/UX designer on an AI coaching
-                platform. I taught myself enough code to speak engineer, which
-                means I spend a lot of time in the gap between design and
-                development. That's where I like to be.
+                platform.
               </p>
               <p>
-                Outside work I'm usually in the kitchen making something from
-                scratch — bread, pasta, whatever's technically interesting. I
-                lift weights, watch films, and listen to a lot of 90s trip hop.
-                I care about craft in most things I do.
+                I'm obsessed with understanding why and how things work—whether
+                it's the chemistry of making delicious food, the biomechanics of
+                weight-lifting, or the psychology behind an interface. I've
+                recently been channeling this passion through baking and cooking
+                from scratch.
+              </p>
+              <p>
+                I'm also passionate about health and movement, building strength
+                and mobility with weightlifting and calisthenics.
+              </p>
+              <p>
+                I'm a regular consumer of film, music, and the ideas they
+                explore. My current favorite genre is 90's trip hop! I love its
+                layered production and atmospheric depth.
               </p>
             </div>
 
