@@ -39,7 +39,7 @@
 
 .about-detail {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: var(--space-12);
   margin-bottom: var(--space-16);
   align-items: start;
@@ -116,6 +116,7 @@
   flex-direction: column;
   border: var(--border);
   margin-top: var(--space-4);
+  width: 100%;
 }
 
 .about-link {
@@ -314,5 +315,11 @@
 
   .about-ctas {
     flex-direction: column;
+  }
+
+  .about-link-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
