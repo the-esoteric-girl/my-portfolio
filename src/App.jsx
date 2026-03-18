@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
 import Work from "./pages/Work";
+import PageTransition from "./components/PageTransition";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,11 +40,13 @@ function App() {
       <ScrollToTop />
       <Cursor />
       <Nav />
-      <Routes>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/case-studies/consulta" element={<CaseStudy />} />
-      </Routes>
+      <PageTransition>
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/case-studies/consulta" element={<CaseStudy />} />
+        </Routes>
+      </PageTransition>
     </BrowserRouter>
   );
 }
