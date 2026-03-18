@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
 import Work from "./pages/Work";
 import PageTransition from "./components/PageTransition";
+import { Analytics } from "@vercel/analytics/next";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
