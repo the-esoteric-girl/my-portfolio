@@ -38,53 +38,55 @@ function Nav() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav
-      className={`nav${isScrolled ? " nav--scrolled" : ""}`}
-      aria-label="Main navigation"
-    >
-      <div className="nav-inner">
-        <a href="/" className="nav-logo">
-          Sophia Ling
-        </a>
+    <>
+      <nav
+        className={`nav${isScrolled ? " nav--scrolled" : ""}`}
+        aria-label="Main navigation"
+      >
+        <div className="nav-inner">
+          <a href="/" className="nav-logo">
+            Sophia Ling
+          </a>
 
-        <ul className="nav-links" role="list">
-          {NAV_LINKS.map(({ label, href, anchor }) => (
-            <li key={label}>
-              {href ? (
-                <Link to={href} className="nav-link">
-                  {label}
-                </Link>
-              ) : (
-                <a href={linkHref(anchor)} className="nav-link">
-                  {label}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
+          <ul className="nav-links" role="list">
+            {NAV_LINKS.map(({ label, href, anchor }) => (
+              <li key={label}>
+                {href ? (
+                  <Link to={href} className="nav-link">
+                    {label}
+                  </Link>
+                ) : (
+                  <a href={linkHref(anchor)} className="nav-link">
+                    {label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
 
-        <div className="nav-actions">
-          <button
-            className="nav-theme-toggle"
-            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-            onClick={toggleTheme}
-          >
-            {isDark ? "☀" : "☽"}
-          </button>
+          <div className="nav-actions">
+            <button
+              className="nav-theme-toggle"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              onClick={toggleTheme}
+            >
+              {isDark ? "☀" : "☽"}
+            </button>
 
-          <button
-            className="nav-hamburger"
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-            aria-controls="nav-overlay"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <span className="nav-hamburger-line" aria-hidden="true" />
-            <span className="nav-hamburger-line" aria-hidden="true" />
-            <span className="nav-hamburger-line" aria-hidden="true" />
-          </button>
+            <button
+              className="nav-hamburger"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="nav-overlay"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <span className="nav-hamburger-line" aria-hidden="true" />
+              <span className="nav-hamburger-line" aria-hidden="true" />
+              <span className="nav-hamburger-line" aria-hidden="true" />
+            </button>
+          </div>
         </div>
-      </div>
+      </nav>
 
       <div
         id="nav-overlay"
@@ -122,7 +124,7 @@ function Nav() {
           ))}
         </ul>
       </div>
-    </nav>
+    </>
   );
 }
 

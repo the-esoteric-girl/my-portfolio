@@ -129,7 +129,7 @@ function About() {
 
         {/* Personal: image grid */}
         <div className="about-personal">
-          <Label variant="eyebrow">[ Beyond the Brief ]</Label>
+          <Label variant="eyebrow">[ MY ARTISTIC SIDE ]</Label>
           <div className="about-images-grid">
             <img
               className="about-img"
