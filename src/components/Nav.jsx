@@ -43,7 +43,6 @@ function Nav() {
         className={`nav${isScrolled ? " nav--scrolled" : ""}`}
         aria-label="Main navigation"
       >
-        <div className="nav-safe-area-fill" aria-hidden="true" />
         <div className="nav-inner">
           <a href="/" className="nav-logo">
             Sophia Ling
