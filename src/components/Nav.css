@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+  padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top, 0px);
   z-index: var(--z-nav);
   background: var(--color-bg);
@@ -205,6 +205,7 @@
 
 .nav-overlay-close {
   position: absolute;
+  top: calc(var(--space-4) + constant(safe-area-inset-top));
   top: calc(var(--space-4) + env(safe-area-inset-top, 0px));
   right: var(--space-6);
   width: 44px;
