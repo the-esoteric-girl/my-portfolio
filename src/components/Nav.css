@@ -9,6 +9,10 @@
   z-index: var(--z-nav);
   background: var(--color-bg);
   border-bottom: var(--border);
+  /* Force GPU compositing layer — prevents iOS Safari from failing to
+     repaint the background in the safe-area zone during scroll momentum */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .nav--scrolled {
