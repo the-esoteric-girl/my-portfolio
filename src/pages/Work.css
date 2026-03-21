@@ -3,7 +3,7 @@
 }
 
 .work-header {
-  padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
+  padding: calc(var(--nav-offset) + var(--space-16)) 0 var(--space-16);
   border-bottom: var(--border);
 }
 

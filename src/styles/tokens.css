@@ -110,6 +110,7 @@
 
   /* ── Nav ───────────────────────────────────────────────────── */
   --nav-height: 64px;
+  --nav-offset: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
   --z-nav: var(--z-sticky);
 
   /* ── Border shorthand ──────────────────────────────────────── */

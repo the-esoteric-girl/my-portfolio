@@ -9,7 +9,7 @@ const CASE_STUDIES = [
       "Full-cycle redesign of an AI-powered immigration platform. Real users, real stakes — immigrants navigating the US immigration process.",
     outcomes:
       "Support questions dropped. Users reported significantly less confusion. Shipped to real users before company closure in Oct 2025.",
-    thumbnail: "/img/consulta-thumbnail.png",
+    thumbnail: "/img/consulta-thumbnail.webp",
     thumbnailAlt: "Consulta Immigration Portal — before and after redesign",
     pills: [
       { label: "UX/UI", variant: "pill-accent" },

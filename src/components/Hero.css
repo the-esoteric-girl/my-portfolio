@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr 320px;
   grid-template-rows: 1fr auto auto;
-  padding-top: var(--nav-height);
+  padding-top: var(--nav-offset);
 }
 
 /* ── Content column ────────────────────────────────────────── */

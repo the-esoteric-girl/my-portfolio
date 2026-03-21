@@ -110,12 +110,8 @@ export default function CaseStudy() {
       const id = anchor.getAttribute("href").slice(1);
       const el = document.getElementById(id);
       if (!el) return;
-      const navH =
-        parseFloat(
-          getComputedStyle(document.documentElement).getPropertyValue(
-            "--nav-height",
-          ),
-        ) || 0;
+      const navEl = document.querySelector("nav");
+      const navH = navEl ? navEl.getBoundingClientRect().height : 0;
       const offset = navH + 24;
       window.scrollTo({
         top: el.getBoundingClientRect().top + window.scrollY - offset,

@@ -27,7 +27,7 @@ function About() {
           <div className="about-photo-col">
             <div className="about-photo-frame">
               <img
-                src="/img/sophia.jpg"
+                src="/img/sophia.webp"
                 alt="Sophia Ling, UX/UI designer"
                 className="about-photo"
                 loading="lazy"
@@ -133,37 +133,37 @@ function About() {
           <div className="about-images-grid">
             <img
               className="about-img"
-              src="/img/thanksgiving.jpg"
+              src="/img/thanksgiving.webp"
               alt="White buttercream cake with 'happy thanksgiving 2025' written on it and piped rosettes"
               loading="lazy"
             />
             <img
               className="about-img"
-              src="/img/strawberries.jpg"
+              src="/img/strawberries.webp"
               alt="Chocolate-dipped strawberries with detailing"
               loading="lazy"
             />
             <img
               className="about-img"
-              src="/img/strawberrycake.jpg"
+              src="/img/strawberrycake.webp"
               alt="Asian-style whipped cream chiffon cake with strawberries on top"
               loading="lazy"
             />
             <img
               className="about-img"
-              src="/img/purple.jpg"
+              src="/img/purple.webp"
               alt="Purple buttercream cake with 'twenty one' written on top and star and flower detailing"
               loading="lazy"
             />
             <img
               className="about-img"
-              src="/img/astronaut.jpg"
+              src="/img/astronaut.webp"
               alt="Watercolor painting of astronaut in space"
               loading="lazy"
             />
             <img
               className="about-img"
-              src="/img/fruittart.jpg"
+              src="/img/fruittart.webp"
               alt="Fruit tarts"
               loading="lazy"
             />

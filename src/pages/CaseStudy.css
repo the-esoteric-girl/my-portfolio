@@ -13,7 +13,7 @@
 .cs-hero-inner {
   max-width: 1200px;
   margin-inline: auto;
-  padding: calc(var(--nav-height) + var(--space-16)) var(--space-8) 0;
+  padding: calc(var(--nav-offset) + var(--space-16)) var(--space-8) 0;
 }
 
 /* Back button — overrides for dark background */
@@ -129,7 +129,7 @@
 /* ── Sidebar ─────────────────────────────────────────────── */
 .cs-sidebar {
   position: sticky;
-  top: calc(var(--nav-height) + var(--space-6));
+  top: calc(var(--nav-offset) + var(--space-6));
   align-self: start;
   padding: var(--space-10) var(--space-6) var(--space-10) 0;
   border-right: var(--border);
@@ -411,7 +411,7 @@
 
   .cs-sidebar {
     position: sticky;
-    top: var(--nav-height);
+    top: var(--nav-offset);
     z-index: calc(var(--z-nav) - 1);
     background: var(--color-bg);
     border-right: none;
@@ -485,7 +485,7 @@
 
 @media (max-width: 480px) {
   .cs-hero-inner {
-    padding: calc(var(--nav-height) + var(--space-8)) var(--space-4) 0;
+    padding: calc(var(--nav-offset) + var(--space-8)) var(--space-4) 0;
   }
 
   .cs-hero-content h1 {
