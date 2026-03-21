@@ -19,6 +19,17 @@
   background: var(--color-bg);
 }
 
+/* ── Safe-area fill ────────────────────────────────────────── */
+.nav-safe-area-fill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top, 0px);
+  background-color: var(--color-bg);
+  z-index: var(--z-nav);
+}
+
 /* ── Inner layout ──────────────────────────────────────────── */
 .nav-inner {
   display: flex;
