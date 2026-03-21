@@ -117,6 +117,13 @@
   .nav-theme-toggle:hover {
     transform: none;
   }
+  .nav-hamburger-line {
+    transition: none;
+  }
+  .nav-overlay,
+  .nav-overlay--open {
+    transition: none;
+  }
 }
 
 /* ── Hamburger ─────────────────────────────────────────────── */
@@ -149,26 +156,51 @@
 
 .nav-hamburger-line {
   display: block;
-  width: 20px;
+  width: 28px;
   height: 2px;
   background: var(--color-ink);
   border-radius: var(--radius-none);
   flex-shrink: 0;
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    opacity var(--duration-base) var(--ease-out);
+}
+
+.nav-hamburger[aria-expanded="true"] .nav-hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger[aria-expanded="true"] .nav-hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger[aria-expanded="true"] .nav-hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── Overlay ───────────────────────────────────────────────── */
 .nav-overlay {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   z-index: var(--z-modal);
   background: var(--color-bg);
   align-items: center;
   justify-content: center;
+  clip-path: inset(0 0 100% 0);
+  visibility: hidden;
+  transition:
+    clip-path var(--duration-slow) var(--ease-out),
+    visibility 0s linear var(--duration-slow);
 }
 
 .nav-overlay--open {
-  display: flex;
+  clip-path: inset(0 0 0% 0);
+  visibility: visible;
+  transition:
+    clip-path var(--duration-slow) var(--ease-out),
+    visibility 0s linear 0s;
 }
 
 .nav-overlay-close {
