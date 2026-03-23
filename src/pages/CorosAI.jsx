@@ -302,6 +302,46 @@ export default function CorosAI() {
               especially damaging — credibility is core to what COROS AI
               promises its users.
             </p>
+            <div className="cs-ba">
+              <div className="cs-ba-grid">
+                <div className="cs-ba-col">
+                  <span className="cs-ba-label">Dimensions — Onboarding</span>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/dimensions-before.png"
+                      alt="Dimensions section in onboarding before redesign"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div className="cs-ba-col">
+                  <span className="cs-ba-label">Dimensions — Settings</span>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/personalization-menu-before.png"
+                      alt="Dimensions settings modal before redesign"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* 03 — Discovery */}
