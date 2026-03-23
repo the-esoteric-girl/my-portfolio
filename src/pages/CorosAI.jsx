@@ -421,9 +421,77 @@ export default function CorosAI() {
                 language to better match the credibility COROS AI needed to
                 convey.
               </p>
+              <div className="cs-ba">
+                <div className="cs-ba-direction">
+                  <span className="cs-ba-label">Direction A</span>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/brand-exploration-a-desktop.png"
+                      alt="Brand exploration direction A — desktop"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div className="cs-ba-direction">
+                  <span className="cs-ba-label">Direction B</span>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/brand-exploration-b-mobile.png"
+                      alt="Brand exploration direction B — mobile screens"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/brand-exploration-b-desktop-1.png"
+                      alt="Brand exploration direction B — desktop view 1"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div
+                    className="cs-ba-img"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Click to enlarge"
+                    onClick={openLightbox}
+                    onKeyDown={openLightbox}
+                  >
+                    <img
+                      src="/img/case-studies/coros-ai/brand-exploration-b-desktop-2.png"
+                      alt="Brand exploration direction B — desktop view 2"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
               <p>
                 Ultimately, the team decided to retain the existing brand colors
-                and fonts, using the explorations to inform direction rather
+                and fonts — using these explorations to inform direction rather
                 than overhaul the identity.
               </p>
             </div>

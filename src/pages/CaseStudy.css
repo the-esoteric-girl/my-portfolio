@@ -327,11 +327,16 @@
   color: var(--color-text-muted);
 }
 
+.cs-ba-direction + .cs-ba-direction {
+  margin-top: var(--space-8);
+}
+
 .cs-ba-img {
   border: var(--border);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   background: var(--color-surface);
+  margin-bottom: var(--space-4);
   cursor: pointer;
   transition: opacity var(--duration-fast);
 }
