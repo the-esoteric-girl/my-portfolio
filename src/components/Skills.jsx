@@ -16,7 +16,15 @@ const COLUMNS = [
   },
   {
     heading: "Tools",
-    skills: ["Figma", "FigJam", "Miro", "Framer", "Mixpanel", "Vercel"],
+    skills: [
+      "Figma",
+      "FigJam",
+      "Miro",
+      "Webflow",
+      "Framer",
+      "Mixpanel",
+      "Vercel",
+    ],
   },
   {
     heading: "Code",

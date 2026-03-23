@@ -6,9 +6,11 @@ import "./CaseStudyCard.css";
 export default function CaseStudyCard({ study }) {
   return (
     <article className="cs-card">
-      <div className="cs-card-image">
-        <img src={study.thumbnail} alt={study.thumbnailAlt} loading="lazy" />
-      </div>
+      {study.thumbnail && (
+        <div className="cs-card-image">
+          <img src={study.thumbnail} alt={study.thumbnailAlt} loading="lazy" />
+        </div>
+      )}
       <div className="cs-card-body">
         <div className="cs-card-top">
           <Label variant="meta">{study.meta}</Label>

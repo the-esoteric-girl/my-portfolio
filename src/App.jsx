@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
+import CorosAI from "./pages/CorosAI";
 import Work from "./pages/Work";
 import PageTransition from "./components/PageTransition";
 import { Analytics } from "@vercel/analytics/react";
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<Portfolio />} />
           <Route path="/work" element={<Work />} />
           <Route path="/case-studies/consulta" element={<CaseStudy />} />
+          <Route path="/case-studies/coros-ai" element={<CorosAI />} />
         </Routes>
       </PageTransition>
       <Analytics />
