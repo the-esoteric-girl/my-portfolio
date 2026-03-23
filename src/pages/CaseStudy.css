@@ -328,7 +328,7 @@
 }
 
 .cs-ba-direction + .cs-ba-direction {
-  margin-top: var(--space-8);
+  margin-top: var(--space-10);
 }
 
 .cs-ba-img {
