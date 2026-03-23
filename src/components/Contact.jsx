@@ -40,7 +40,7 @@ export default function Contact() {
       <div className="container">
         <div className="contact-header">
           <h2>Contact</h2>
-          <Label variant="counter">[ 03 Get In Touch ]</Label>
+          <Label variant="counter">[ 05 Get In Touch ]</Label>
         </div>
         <div className="contact-grid">
           <div className="contact-left">

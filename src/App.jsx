@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import CaseStudies from "./components/CaseStudies";
 import About from "./components/About";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CaseStudy from "./pages/CaseStudy";
@@ -28,6 +29,7 @@ function Portfolio() {
         <Hero />
         <CaseStudies />
         <About />
+        <Skills />
         <Contact />
       </main>
       <Footer />
