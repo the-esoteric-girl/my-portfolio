@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTheme } from "../hooks/useTheme";
 import "./Nav.css";
 
@@ -13,11 +13,6 @@ function Nav() {
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-
-  const linkHref = (anchor) => (isHome ? `#${anchor}` : `/#${anchor}`);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight);
@@ -56,9 +51,9 @@ function Nav() {
                     {label}
                   </Link>
                 ) : (
-                  <a href={linkHref(anchor)} className="nav-link">
+                  <Link to={{ pathname: "/", hash: `#${anchor}` }} className="nav-link">
                     {label}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}
@@ -112,13 +107,13 @@ function Nav() {
                   {label}
                 </Link>
               ) : (
-                <a
-                  href={linkHref(anchor)}
+                <Link
+                  to={{ pathname: "/", hash: `#${anchor}` }}
                   className="nav-overlay-link"
                   onClick={closeMenu}
                 >
                   {label}
-                </a>
+                </Link>
               )}
             </li>
           ))}

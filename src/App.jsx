@@ -14,11 +14,16 @@ import PageTransition from "./components/PageTransition";
 import { Analytics } from "@vercel/analytics/react";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
     history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 }
 
