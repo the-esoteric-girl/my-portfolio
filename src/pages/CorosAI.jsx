@@ -81,9 +81,9 @@ export default function CorosAI() {
   /* ── IntersectionObserver — active TOC item ──────────────── */
   // Runs once on mount — observed elements are static; no dep needed
   useEffect(() => {
-    const els = ALL_OBSERVE_IDS.map((id) =>
-      document.getElementById(id),
-    ).filter(Boolean);
+    const els = ALL_OBSERVE_IDS.map((id) => document.getElementById(id)).filter(
+      Boolean,
+    );
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -156,7 +156,7 @@ export default function CorosAI() {
             variant="secondary"
             size="sm"
             as="a"
-            href="/"
+            href="/work"
             className="cs-back"
           >
             ← Back to Work
@@ -186,7 +186,7 @@ export default function CorosAI() {
             </div>
             <div className="cs-stat">
               <label>Timeline</label>
-              <span className="cs-stat-value">2025 — Ongoing</span>
+              <span className="cs-stat-value">Oct 2025 — Ongoing</span>
             </div>
             <div className="cs-stat">
               <label>Team</label>
@@ -248,7 +248,7 @@ export default function CorosAI() {
               <span>Overview</span>
             </div>
             <h2 id="title-overview" className="cs-section-title">
-              An AI coaching platform that needed to earn its users' trust.
+              More than a visual refresh — a system rebuilt from the ground up.
             </h2>
             <p>
               COROS AI is an AI coaching platform that helps high-performing
@@ -278,15 +278,15 @@ export default function CorosAI() {
               <span>The Problem</span>
             </div>
             <h2 id="title-problem" className="cs-section-title">
-              Two problems — one visible, one structural.
+              Inconsistent UI was undermining a product built around trust.
             </h2>
             <p>
               The existing COROS AI interface had two compounding problems. On
               the surface, the UI felt inconsistent and unpolished — color was
               used decoratively rather than functionally, meaning some elements
-              appeared significant without actually being interactive. Users were
-              also confused about whether their actions had registered, pointing
-              to missing or unclear feedback states.
+              appeared significant without actually being interactive. Users
+              were also confused about whether their actions had registered,
+              pointing to missing or unclear feedback states.
             </p>
             <p>
               Underneath the visual layer, the root cause was structural:
@@ -315,22 +315,21 @@ export default function CorosAI() {
               <span>Discovery</span>
             </div>
             <h2 id="title-discovery" className="cs-section-title">
-              A usability issue, a design system issue, and a brand issue — all
-              three.
+              Three interconnected problems. None solvable in isolation.
             </h2>
             <p>
               Before jumping into redesign, I audited the existing product to
-              map the scope of inconsistencies — reviewing color usage, component
-              states, and interaction patterns across screens. I also synthesized
-              existing user feedback shared by the team, which surfaced a
-              recurring pain point: users were unsure whether their interactions
-              had registered, particularly around selection states.
+              map the scope of inconsistencies — reviewing color usage,
+              component states, and interaction patterns across screens. I also
+              synthesized existing user feedback shared by the team, which
+              surfaced a recurring pain point: users were unsure whether their
+              interactions had registered, particularly around selection states.
             </p>
             <p>
               The team also flagged that the existing design felt outdated and
               didn't reflect the COROS AI brand — the aesthetic wasn't
-              communicating the credibility and sophistication the product needed
-              to convey.
+              communicating the credibility and sophistication the product
+              needed to convey.
             </p>
             <p>
               Together these inputs pointed to three interconnected problems: a
@@ -350,7 +349,7 @@ export default function CorosAI() {
               <span>Process</span>
             </div>
             <h2 id="title-process" className="cs-section-title">
-              The work, in order.
+              Five phases, from quick wins to full system migration.
             </h2>
             <p>
               The redesign unfolded in phases rather than a clean linear process
@@ -384,24 +383,14 @@ export default function CorosAI() {
               </p>
               <p>
                 Ultimately, the team decided to retain the existing brand colors
-                and fonts, using the explorations to inform direction rather than
-                overhaul the identity.
+                and fonts, using the explorations to inform direction rather
+                than overhaul the identity.
               </p>
             </div>
 
             {/* 4.3 — Design System Migration */}
             <div id="phase-3">
               <h3>4.3 Design System Migration</h3>
-              <p>
-                With brand direction confirmed, we migrated from MUI to shadcn.
-                The existing MUI implementation was outdated and heavily
-                pre-styled, which had been causing engineers to constantly
-                override defaults — the root cause of the hardcoding problem.
-                Shadcn offered sensible defaults with greater flexibility, giving
-                us a foundation we could actually build consistently on. I
-                redefined the color token structure, built new components, and
-                established both light and dark mode across the system.
-              </p>
               <h4 className="cs-paragraph-heading">Why shadcn over MUI</h4>
               <p>
                 The decision came down to two factors. First, the version of MUI
@@ -429,8 +418,8 @@ export default function CorosAI() {
                 personality selector slider with a toggle. The original slider
                 implied a spectrum, but the interaction is actually binary —
                 users choose between Supportive or Provocative. A toggle
-                accurately represents that mental model. Small change, meaningful
-                reason.
+                accurately represents that mental model. Small change,
+                meaningful reason.
               </p>
             </div>
 
@@ -459,7 +448,7 @@ export default function CorosAI() {
               <span>Outcomes</span>
             </div>
             <h2 id="title-outcomes" className="cs-section-title">
-              A design system both teams can work from.
+              A design system both teams can actually work from.
             </h2>
             <p>
               The redesign established a more consistent and credible visual
@@ -482,7 +471,7 @@ export default function CorosAI() {
               <span>Reflection</span>
             </div>
             <h2 id="title-reflection" className="cs-section-title">
-              Define success before you start.
+              Next time, define success before designing anything.
             </h2>
             <p>
               Looking back, the biggest thing I'd do differently is defining

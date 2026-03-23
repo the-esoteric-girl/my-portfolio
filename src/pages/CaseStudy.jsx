@@ -158,7 +158,7 @@ export default function CaseStudy() {
             variant="secondary"
             size="sm"
             as="a"
-            href="/"
+            href="/work"
             className="cs-back"
           >
             ← Back to Work
