@@ -17,6 +17,12 @@
   font-family: var(--font-heading);
 }
 
+.case-studies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
 .case-study-card {
   display: grid;
   grid-template-columns: 1.1fr 1fr;

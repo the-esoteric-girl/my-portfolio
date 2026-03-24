@@ -41,8 +41,6 @@ export default function Skills() {
           <Label variant="counter">[ 04 Skills ]</Label>
         </div>
 
-        <p className="skills-subtitle">[ What I bring to a team ]</p>
-
         <div className="skills-grid">
           {COLUMNS.map(({ heading, skills }) => (
             <div key={heading} className="skills-column">

@@ -329,7 +329,11 @@
 
 .cs-ba-direction > .cs-ba-label {
   color: var(--color-text-primary);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.cs-ba-direction > .cs-ba {
+  margin-top: 0;
 }
 
 .cs-ba-direction + .cs-ba-direction {

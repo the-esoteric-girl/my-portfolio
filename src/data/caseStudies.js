@@ -1,5 +1,25 @@
 const CASE_STUDIES = [
   {
+    slug: "coros-ai",
+    href: "/case-studies/coros-ai",
+    featured: true,
+    title: "COROS AI Platform Redesign",
+    meta: "Product & UX Designer — Ongoing — 2025",
+    description:
+      "Leading the product and UI/UX redesign of an AI coaching platform — rebuilding the design system from the foundation up and closing the gap between design and engineering.",
+    outcomes:
+      "More consistent UI, clearer feedback states, and a design-to-engineering workflow that eliminated hardcoding across the codebase.",
+    thumbnail: "/img/case-studies/coros-ai/coros-thumbnail.png",
+    thumbnailAlt: "COROS AI Platform — redesign in progress",
+    pills: [
+      { label: "Product Design", variant: "pill-accent" },
+      { label: "UI/UX", variant: "pill" },
+      { label: "Design Systems", variant: "pill" },
+      { label: "Figma", variant: "pill" },
+      { label: "shadcn", variant: "pill" },
+    ],
+  },
+  {
     slug: "consulta",
     href: "/case-studies/consulta",
     featured: true,
@@ -16,26 +36,6 @@ const CASE_STUDIES = [
       { label: "Figma", variant: "pill" },
       { label: "Accessibility", variant: "pill" },
       { label: "Design Systems", variant: "pill" },
-    ],
-  },
-  {
-    slug: "coros-ai",
-    href: "/case-studies/coros-ai",
-    featured: false,
-    title: "COROS AI Platform Redesign",
-    meta: "Product & UX Designer — Ongoing — 2025",
-    description:
-      "Leading the product and UI/UX redesign of an AI coaching platform — rebuilding the design system from the foundation up and closing the gap between design and engineering.",
-    outcomes:
-      "More consistent UI, clearer feedback states, and a design-to-engineering workflow that eliminated hardcoding across the codebase.",
-    thumbnail: null,
-    thumbnailAlt: "COROS AI Platform — redesign in progress",
-    pills: [
-      { label: "Product Design", variant: "pill-accent" },
-      { label: "UI/UX", variant: "pill" },
-      { label: "Design Systems", variant: "pill" },
-      { label: "Figma", variant: "pill" },
-      { label: "shadcn", variant: "pill" },
     ],
   },
 ];
