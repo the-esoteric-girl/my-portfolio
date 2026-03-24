@@ -568,12 +568,61 @@ export default function CorosAI() {
                 settings pages and onboarding.
               </p>
               <p>
-                One decision I'm particularly proud of: replacing the
-                personality selector slider with a toggle. The original slider
-                implied a spectrum, but the interaction is actually binary —
-                users choose between Supportive or Provocative. A toggle
-                accurately represents that mental model. Small change,
-                meaningful reason.
+                One decision I made was replacing the personality selector
+                slider with a toggle. The original slider implied a spectrum,
+                but the interaction is actually binary — users choose between
+                Supportive or Provocative. A toggle accurately represents that
+                mental model. Small change, meaningful reason.
+              </p>
+
+              <div className="cs-ba-direction">
+                <span className="cs-ba-label">Personality — Onboarding</span>
+                <div className="cs-ba">
+                  <div className="cs-ba-grid">
+                    <div className="cs-ba-col">
+                      <span className="cs-ba-label">Before</span>
+                      <div
+                        className="cs-ba-img"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="Click to enlarge"
+                        onClick={openLightbox}
+                        onKeyDown={openLightbox}
+                      >
+                        <img
+                          src="/img/case-studies/coros-ai/personality-before.png"
+                          alt="Personality selector before redesign — slider"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                    <div className="cs-ba-col">
+                      <span className="cs-ba-label">After</span>
+                      <div
+                        className="cs-ba-img"
+                        role="button"
+                        tabIndex={0}
+                        aria-label="Click to enlarge"
+                        onClick={openLightbox}
+                        onKeyDown={openLightbox}
+                      >
+                        <img
+                          src="/img/case-studies/coros-ai/personality-after.png"
+                          alt="Personality selector after redesign — toggle"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                The screen also received broader spacing and typographic
+                improvements — larger text, more breathing room between
+                elements, and descriptor labels to help users understand what
+                each option actually means.
               </p>
             </div>
 
