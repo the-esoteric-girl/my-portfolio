@@ -249,7 +249,7 @@ export default function CaseStudy() {
               <span>Overview</span>
             </div>
             <h2 id="title-overview" className="cs-section-title">
-              A portal that needed to work as hard as the people using it.
+              Confusion in an immigration portal isn't just frustrating — it has real consequences.
             </h2>
             <p>
               For immigrants navigating the US legal system, confusion isn't
@@ -292,7 +292,7 @@ export default function CaseStudy() {
               <span>The Problem</span>
             </div>
             <h2 id="title-problem" className="cs-section-title">
-              Functional but broken.
+              Every element competed for attention. Nothing got noticed when it needed to be.
             </h2>
             <p>
               The original portal had fundamental issues that compounded across
@@ -351,7 +351,7 @@ export default function CaseStudy() {
               <span>Research</span>
             </div>
             <h2 id="title-research" className="cs-section-title">
-              Start with what's known.
+              No direct user access — so I started with a heuristic audit and the founders who knew where people got stuck.
             </h2>
             <p>
               I didn't have direct access to users. What I had was the next best
@@ -395,7 +395,7 @@ export default function CaseStudy() {
               <span>Principles</span>
             </div>
             <h2 id="title-principles" className="cs-section-title">
-              Three principles, every decision.
+              Progressive disclosure. Orientation before action. Visual urgency for real urgency.
             </h2>
             <p>
               Before wireframing anything, I wrote three design principles for
@@ -447,7 +447,7 @@ export default function CaseStudy() {
               <span>Redesign</span>
             </div>
             <h2 id="title-redesign" className="cs-section-title">
-              The work.
+              Five screens. Each one a specific problem, a specific solution.
             </h2>
             <p>
               Five screens. Each one a specific problem, a specific solution.
@@ -835,7 +835,7 @@ export default function CaseStudy() {
               <span>Outcomes</span>
             </div>
             <h2 id="title-outcomes" className="cs-section-title">
-              The work shipped.
+              Support questions dropped. Attorneys got time back. Users made fewer mistakes.
             </h2>
             <p>
               The redesigned portal shipped to real users. The cofounders
@@ -864,7 +864,7 @@ export default function CaseStudy() {
               <span>Reflection</span>
             </div>
             <h2 id="title-reflection" className="cs-section-title">
-              What I learned.
+              I should have pushed harder for direct user access — even one conversation beats a week of assumptions.
             </h2>
             <h4 className="cs-paragraph-heading">
               Prioritize usability testing and user feedback.
