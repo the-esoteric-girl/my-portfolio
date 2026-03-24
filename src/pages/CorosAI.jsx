@@ -285,6 +285,64 @@ export default function CorosAI() {
             <p>
               Alongside the UI redesign, I designed a 9-part conceptual illustration series for COROS AI's LinkedIn presence. Each graphic contrasts the Psychological Approach — what everyone else is doing — with the Ontological Approach that COROS AI is built on. The goal was to communicate a complex philosophical distinction in a visual, shareable format for an audience of senior professionals.
             </p>
+            <div className="cs-illustration-grid">
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label="Click to enlarge"
+                onClick={openLightbox}
+                onKeyDown={openLightbox}
+              >
+                <img
+                  src="/img/case-studies/coros-ai/linkedin-fixing-transcending.png"
+                  alt="Fixing vs Transcending — Psychological vs Ontological Approach"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label="Click to enlarge"
+                onClick={openLightbox}
+                onKeyDown={openLightbox}
+              >
+                <img
+                  src="/img/case-studies/coros-ai/linkedin-breakdown-breakthrough.png"
+                  alt="Break-down vs Break-through — Psychological vs Ontological Approach"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label="Click to enlarge"
+                onClick={openLightbox}
+                onKeyDown={openLightbox}
+              >
+                <img
+                  src="/img/case-studies/coros-ai/linkedin-instruction-emergence.png"
+                  alt="Instruction vs Emergence — Psychological vs Ontological Approach"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label="Click to enlarge"
+                onClick={openLightbox}
+                onKeyDown={openLightbox}
+              >
+                <img
+                  src="/img/case-studies/coros-ai/linkedin-competition-cocreation.png"
+                  alt="Competition vs Co-creation — Psychological vs Ontological Approach"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
           </section>
 
           {/* 03 — The Problem */}
