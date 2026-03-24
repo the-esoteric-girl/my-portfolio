@@ -280,10 +280,16 @@ export default function CorosAI() {
               <span>Brand &amp; Communication</span>
             </div>
             <h2 id="title-brand-communication" className="cs-section-title">
-              Designed to explain what makes COROS AI different from every other coaching app.
+              Designed to explain what makes COROS AI different from every other
+              coaching app.
             </h2>
             <p>
-              Alongside the UI redesign, I designed a 9-part conceptual illustration series for COROS AI's LinkedIn presence. Each graphic contrasts the Psychological Approach — what everyone else is doing — with the Ontological Approach that COROS AI is built on. The goal was to communicate a complex philosophical distinction in a visual, shareable format for an audience of senior professionals.
+              Alongside the UI redesign, I designed a 9-part conceptual
+              illustration series for COROS AI's LinkedIn presence. Each graphic
+              contrasts the Psychological Approach — what everyone else is doing
+              — with the Ontological Approach that COROS AI is built on. The
+              goal was to communicate a complex philosophical distinction in a
+              visual, shareable format for an audience of senior professionals.
             </p>
             <div className="cs-illustration-grid">
               <div

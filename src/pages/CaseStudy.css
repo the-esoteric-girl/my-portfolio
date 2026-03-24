@@ -341,8 +341,8 @@
 }
 
 .cs-ba-img {
-  border: var(--border);
-  box-shadow: var(--shadow-md);
+  border: var(--border-subtle);
+  box-shadow: none;
   overflow: hidden;
   background: var(--color-surface);
   margin-bottom: var(--space-4);
