@@ -7,22 +7,23 @@ import "./CorosAI.css";
 
 const TOC_ITEMS = [
   { id: "overview", num: "01", label: "Overview" },
-  { id: "problem", num: "02", label: "The Problem" },
-  { id: "discovery", num: "03", label: "Discovery" },
+  { id: "brand-communication", num: "02", label: "Brand & Communication" },
+  { id: "problem", num: "03", label: "The Problem" },
+  { id: "discovery", num: "04", label: "Discovery" },
   {
     id: "process",
-    num: "04",
+    num: "05",
     label: "Process",
     subs: [
-      { id: "phase-1", num: "4.1", label: "Phase 1" },
-      { id: "phase-2", num: "4.2", label: "Phase 2" },
-      { id: "phase-3", num: "4.3", label: "Phase 3" },
-      { id: "phase-4", num: "4.4", label: "Phase 4" },
-      { id: "phase-5", num: "4.5", label: "Phase 5" },
+      { id: "phase-1", num: "5.1", label: "Phase 1" },
+      { id: "phase-2", num: "5.2", label: "Phase 2" },
+      { id: "phase-3", num: "5.3", label: "Phase 3" },
+      { id: "phase-4", num: "5.4", label: "Phase 4" },
+      { id: "phase-5", num: "5.5", label: "Phase 5" },
     ],
   },
-  { id: "outcomes", num: "05", label: "Outcomes" },
-  { id: "reflection", num: "06", label: "Reflection" },
+  { id: "outcomes", num: "06", label: "Outcomes" },
+  { id: "reflection", num: "07", label: "Reflection" },
 ];
 
 const SUB_PARENT = {
@@ -35,6 +36,7 @@ const SUB_PARENT = {
 
 const ALL_OBSERVE_IDS = [
   "overview",
+  "brand-communication",
   "problem",
   "discovery",
   "phase-1",
@@ -267,14 +269,32 @@ export default function CorosAI() {
             </p>
           </section>
 
-          {/* 02 — The Problem */}
+          {/* 02 — Brand & Communication */}
+          <section
+            id="brand-communication"
+            className="cs-section"
+            aria-labelledby="title-brand-communication"
+          >
+            <div className="cs-section-label">
+              <span className="cs-section-num">02</span>
+              <span>Brand &amp; Communication</span>
+            </div>
+            <h2 id="title-brand-communication" className="cs-section-title">
+              Designed to explain what makes COROS AI different from every other coaching app.
+            </h2>
+            <p>
+              Alongside the UI redesign, I designed a 9-part conceptual illustration series for COROS AI's LinkedIn presence. Each graphic contrasts the Psychological Approach — what everyone else is doing — with the Ontological Approach that COROS AI is built on. The goal was to communicate a complex philosophical distinction in a visual, shareable format for an audience of senior professionals.
+            </p>
+          </section>
+
+          {/* 03 — The Problem */}
           <section
             id="problem"
             className="cs-section"
             aria-labelledby="title-problem"
           >
             <div className="cs-section-label">
-              <span className="cs-section-num">02</span>
+              <span className="cs-section-num">03</span>
               <span>The Problem</span>
             </div>
             <h2 id="title-problem" className="cs-section-title">
@@ -390,14 +410,14 @@ export default function CorosAI() {
             </div>
           </section>
 
-          {/* 03 — Discovery */}
+          {/* 04 — Discovery */}
           <section
             id="discovery"
             className="cs-section"
             aria-labelledby="title-discovery"
           >
             <div className="cs-section-label">
-              <span className="cs-section-num">03</span>
+              <span className="cs-section-num">04</span>
               <span>Discovery</span>
             </div>
             <h2 id="title-discovery" className="cs-section-title">
@@ -424,14 +444,14 @@ export default function CorosAI() {
             </p>
           </section>
 
-          {/* 04 — Process */}
+          {/* 05 — Process */}
           <section
             id="process"
             className="cs-section"
             aria-labelledby="title-process"
           >
             <div className="cs-section-label">
-              <span className="cs-section-num">04</span>
+              <span className="cs-section-num">05</span>
               <span>Process</span>
             </div>
             <h2 id="title-process" className="cs-section-title">
@@ -443,9 +463,9 @@ export default function CorosAI() {
               evolving priorities.
             </p>
 
-            {/* 4.1 — Immediate Improvements */}
+            {/* 5.1 — Immediate Improvements */}
             <div id="phase-1">
-              <h3>4.1 Immediate Improvements</h3>
+              <h3>5.1 Immediate Improvements</h3>
               <p>
                 We began by making targeted improvements to the existing design
                 — tightening spacing, addressing the most glaring
@@ -455,9 +475,9 @@ export default function CorosAI() {
               </p>
             </div>
 
-            {/* 4.2 — Brand Exploration */}
+            {/* 5.2 — Brand Exploration */}
             <div id="phase-2">
-              <h3>4.2 Brand Exploration</h3>
+              <h3>5.2 Brand Exploration</h3>
               <p>
                 As it became clear that the product needed more than surface
                 fixes, I prototyped and ideated on a fuller brand redesign
@@ -542,9 +562,9 @@ export default function CorosAI() {
               </p>
             </div>
 
-            {/* 4.3 — Design System Migration */}
+            {/* 5.3 — Design System Migration */}
             <div id="phase-3">
-              <h3>4.3 Design System Migration</h3>
+              <h3>5.3 Design System Migration</h3>
               <h4 className="cs-paragraph-heading">Why shadcn over MUI</h4>
               <p>
                 The decision came down to two factors. First, the version of MUI
@@ -558,9 +578,9 @@ export default function CorosAI() {
               </p>
             </div>
 
-            {/* 4.4 — Redesign */}
+            {/* 5.4 — Redesign */}
             <div id="phase-4">
-              <h3>4.4 Redesign</h3>
+              <h3>5.4 Redesign</h3>
               <p>
                 Working in Figma, I went directly to hi-fi design rather than
                 wireframing — grounded in the constraints and patterns already
@@ -626,9 +646,9 @@ export default function CorosAI() {
               </p>
             </div>
 
-            {/* 4.5 — Engineering Handoff */}
+            {/* 5.5 — Engineering Handoff */}
             <div id="phase-5">
-              <h3>4.5 Engineering Handoff</h3>
+              <h3>5.5 Engineering Handoff</h3>
               <p>
                 Handoff was collaborative and ongoing — a mix of meetings and
                 back-and-forth with the engineering team. A key part of my role
@@ -640,14 +660,14 @@ export default function CorosAI() {
             </div>
           </section>
 
-          {/* 05 — Outcomes */}
+          {/* 06 — Outcomes */}
           <section
             id="outcomes"
             className="cs-section"
             aria-labelledby="title-outcomes"
           >
             <div className="cs-section-label">
-              <span className="cs-section-num">05</span>
+              <span className="cs-section-num">06</span>
               <span>Outcomes</span>
             </div>
             <h2 id="title-outcomes" className="cs-section-title">
@@ -663,14 +683,14 @@ export default function CorosAI() {
             </p>
           </section>
 
-          {/* 06 — Reflection */}
+          {/* 07 — Reflection */}
           <section
             id="reflection"
             className="cs-section"
             aria-labelledby="title-reflection"
           >
             <div className="cs-section-label">
-              <span className="cs-section-num">06</span>
+              <span className="cs-section-num">07</span>
               <span>Reflection</span>
             </div>
             <h2 id="title-reflection" className="cs-section-title">
