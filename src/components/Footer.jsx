@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-left">
           <span className="footer-name">Sophia Ling</span>
-          <span className="footer-copy">© 2025 — All rights reserved</span>
+          <span className="footer-copy">© 2026 — All rights reserved</span>
         </div>
         <nav className="footer-links" aria-label="Footer navigation">
           <a className="footer-link" href="mailto:sophiaxuling@gmail.com">
