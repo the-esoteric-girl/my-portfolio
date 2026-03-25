@@ -6,7 +6,7 @@ const CASE_STUDIES = [
     title: "COROS AI Platform Redesign",
     meta: "Product & UX Designer — Ongoing — 2025",
     description:
-      "Leading the product and UI/UX redesign of an AI coaching platform — rebuilding the design system from the foundation up and closing the gap between design and engineering.",
+      "Contributing to the product and UI/UX redesign of an AI coaching platform — rebuilding the design system from the foundation up and closing the gap between design and engineering.",
     outcomes:
       "More consistent UI, clearer feedback states, and a design-to-engineering workflow that eliminated hardcoding across the codebase.",
     thumbnail: "/img/case-studies/coros-ai/coros-thumbnail.png",
