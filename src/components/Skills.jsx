@@ -1,5 +1,6 @@
 import "./Skills.css";
 import Label from "./ui/Label";
+import { useStaggerReveal } from "../hooks/useStaggerReveal";
 
 const COLUMNS = [
   {
@@ -33,6 +34,8 @@ const COLUMNS = [
 ];
 
 export default function Skills() {
+  const gridRef = useStaggerReveal({ threshold: 0.1 });
+
   return (
     <section id="skills" className="skills" aria-label="Skills">
       <div className="container">
@@ -41,9 +44,9 @@ export default function Skills() {
           <Label variant="counter">[ 04 Skills ]</Label>
         </div>
 
-        <div className="skills-grid">
+        <div className="skills-grid" ref={gridRef}>
           {COLUMNS.map(({ heading, skills }) => (
-            <div key={heading} className="skills-column">
+            <div key={heading} className="skills-column" data-stagger>
               <Label variant="eyebrow">{heading}</Label>
               <ul className="skills-list">
                 {skills.map((skill) => (

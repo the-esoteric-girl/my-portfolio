@@ -165,7 +165,7 @@ export default function CorosAI() {
           </Button>
 
           <div className="cs-hero-content">
-            <Label variant="eyebrow">[ PRODUCT &amp; UI/UX REDESIGN ]</Label>
+            <Label variant="eyebrow">[ ~7 min read ]</Label>
             <h1>COROS AI Platform Redesign</h1>
             <p className="cs-hero-desc">
               Leading the product and UI/UX redesign of an AI coaching platform

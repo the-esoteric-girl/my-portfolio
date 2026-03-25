@@ -1,0 +1,22 @@
+/* ── Stagger reveal ──────────────────────────────────────────
+   Usage: add [data-stagger] to each item inside a container
+   that uses the useStaggerReveal hook. Items start hidden and
+   reveal sequentially when the container enters the viewport.
+   Reduced-motion: items are always visible, no animation.
+   ─────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-stagger] {
+    opacity: 0.15;
+    transform: translateY(14px);
+    transition:
+      opacity var(--duration-slow) var(--ease-out),
+      transform var(--duration-slow) var(--ease-out);
+    transition-delay: calc(var(--stagger-i, 0) * 80ms);
+  }
+
+  [data-stagger].stagger-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

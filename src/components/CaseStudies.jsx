@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 import Label from "./ui/Label";
 import CaseStudyCard from "./ui/CaseStudyCard";
 import CASE_STUDIES from "../data/caseStudies";
+import { useStaggerReveal } from "../hooks/useStaggerReveal";
 import "./CaseStudies.css";
 
 const FEATURED = CASE_STUDIES.filter((s) => s.featured);
 
 export default function CaseStudies() {
+  const gridRef = useStaggerReveal({ individual: true });
+
   return (
     <section id="work" aria-label="Case Studies">
       <div className="container">
@@ -14,9 +17,11 @@ export default function CaseStudies() {
           <h2>Work</h2>
           <Label variant="counter">[ 01 Case Studies ]</Label>
         </div>
-        <div className="case-studies-grid">
+        <div className="case-studies-grid" ref={gridRef}>
           {FEATURED.map((study) => (
-            <CaseStudyCard key={study.slug} study={study} />
+            <div key={study.slug} data-stagger>
+              <CaseStudyCard study={study} />
+            </div>
           ))}
         </div>
         <div className="case-studies-more">

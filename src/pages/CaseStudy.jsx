@@ -165,7 +165,7 @@ export default function CaseStudy() {
           </Button>
 
           <div className="cs-hero-content">
-            <Label variant="eyebrow">[ UI/UX REDESIGN ]</Label>
+            <Label variant="eyebrow">[ ~8 min read ]</Label>
             <h1>Consulta Immigration Portal Redesign</h1>
             <p className="cs-hero-desc">
               Full-cycle redesign of an AI-powered immigration platform. Real

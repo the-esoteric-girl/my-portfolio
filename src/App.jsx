@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
+
+history.scrollRestoration = "manual";
 import Cursor from "./components/Cursor";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
@@ -16,13 +18,12 @@ import { Analytics } from "@vercel/analytics/react";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
-  useEffect(() => {
-    history.scrollRestoration = "manual";
+  useLayoutEffect(() => {
     if (hash) {
       const el = document.getElementById(hash.slice(1));
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
   }, [pathname, hash]);
   return null;
