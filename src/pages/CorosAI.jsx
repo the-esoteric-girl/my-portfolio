@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Button from "../components/ui/Button";
 import Label from "../components/ui/Label";
+import BeforeAfterToggle from "../components/ui/BeforeAfterToggle";
 import Footer from "../components/Footer";
 import "./CorosAI.css";
 
@@ -15,11 +16,8 @@ const TOC_ITEMS = [
     num: "05",
     label: "Process",
     subs: [
-      { id: "phase-1", num: "5.1", label: "Phase 1" },
-      { id: "phase-2", num: "5.2", label: "Phase 2" },
-      { id: "phase-3", num: "5.3", label: "Phase 3" },
-      { id: "phase-4", num: "5.4", label: "Phase 4" },
-      { id: "phase-5", num: "5.5", label: "Phase 5" },
+      { id: "phase-1", num: "5.1", label: "Design System Migration" },
+      { id: "phase-2", num: "5.2", label: "Redesign" },
     ],
   },
   { id: "outcomes", num: "06", label: "Outcomes" },
@@ -29,9 +27,6 @@ const TOC_ITEMS = [
 const SUB_PARENT = {
   "phase-1": "process",
   "phase-2": "process",
-  "phase-3": "process",
-  "phase-4": "process",
-  "phase-5": "process",
 };
 
 const ALL_OBSERVE_IDS = [
@@ -41,9 +36,6 @@ const ALL_OBSERVE_IDS = [
   "discovery",
   "phase-1",
   "phase-2",
-  "phase-3",
-  "phase-4",
-  "phase-5",
   "outcomes",
   "reflection",
 ];
@@ -197,7 +189,7 @@ export default function CorosAI() {
             <div className="cs-stat">
               <label>Status</label>
               <span className="cs-stat-value cs-stat-value--accent">
-                In Progress
+                Shipped
               </span>
             </div>
           </div>
@@ -260,6 +252,12 @@ export default function CorosAI() {
               redesign to modernize the experience and address underlying design
               system inconsistencies that were undermining the product's
               credibility.
+            </p>
+            <p>
+              The interface had grown organically alongside the product, and by
+              late 2025 it showed — the UI felt dated and inconsistent, and
+              didn't reflect the quality of the coaching experience underneath
+              it. The team knew a redesign was overdue.
             </p>
             <p>
               I worked alongside a design lead as a product and UI/UX designer,
@@ -386,92 +384,14 @@ export default function CorosAI() {
               especially damaging — credibility is core to what COROS AI
               promises its users.
             </p>
-            <div className="cs-ba-direction">
-              <span className="cs-ba-label">Dimensions — Onboarding</span>
-              <div className="cs-ba">
-                <div className="cs-ba-grid">
-                  <div className="cs-ba-col">
-                    <span className="cs-ba-label">Before</span>
-                    <div
-                      className="cs-ba-img"
-                      role="button"
-                      tabIndex={0}
-                      aria-label="Click to enlarge"
-                      onClick={openLightbox}
-                      onKeyDown={openLightbox}
-                    >
-                      <img
-                        src="/img/case-studies/coros-ai/dimensions-before.png"
-                        alt="Dimensions section in onboarding before redesign"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-                  <div className="cs-ba-col">
-                    <span className="cs-ba-label">After</span>
-                    <div
-                      className="cs-ba-img"
-                      role="button"
-                      tabIndex={0}
-                      aria-label="Click to enlarge"
-                      onClick={openLightbox}
-                      onKeyDown={openLightbox}
-                    >
-                      <img
-                        src="/img/case-studies/coros-ai/dimensions-after.png"
-                        alt="Dimensions section in onboarding after redesign"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="cs-ba-direction">
-              <span className="cs-ba-label">Dimensions — Settings</span>
-              <div className="cs-ba">
-                <div className="cs-ba-grid">
-                  <div className="cs-ba-col">
-                    <span className="cs-ba-label">Before</span>
-                    <div
-                      className="cs-ba-img"
-                      role="button"
-                      tabIndex={0}
-                      aria-label="Click to enlarge"
-                      onClick={openLightbox}
-                      onKeyDown={openLightbox}
-                    >
-                      <img
-                        src="/img/case-studies/coros-ai/personalization-menu-before.png"
-                        alt="Dimensions settings modal before redesign"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-                  <div className="cs-ba-col">
-                    <span className="cs-ba-label">After</span>
-                    <div
-                      className="cs-ba-img"
-                      role="button"
-                      tabIndex={0}
-                      aria-label="Click to enlarge"
-                      onClick={openLightbox}
-                      onKeyDown={openLightbox}
-                    >
-                      <img
-                        src="/img/case-studies/coros-ai/personalization-menu-after.png"
-                        alt="Dimensions settings modal after redesign"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BeforeAfterToggle
+              label="Dimensions — Onboarding"
+              beforeSrc="/img/case-studies/coros-ai/dimensions-full-before.png"
+              afterSrc="/img/case-studies/coros-ai/dimensions-full-after.png"
+              beforeAlt="Dimensions section in onboarding before redesign"
+              afterAlt="Dimensions section in onboarding after redesign"
+              onImageClick={(src) => setLightbox(src)}
+            />
           </section>
 
           {/* 04 — Discovery */}
@@ -519,116 +439,22 @@ export default function CorosAI() {
               <span>Process</span>
             </div>
             <h2 id="title-process" className="cs-section-title">
-              Five phases, from quick wins to full system migration.
+              Two phases, from quick assessment to full redesign.
             </h2>
             <p>
               The redesign unfolded in phases rather than a clean linear process
               — which reflected the reality of working on a live product with
-              evolving priorities.
+              evolving priorities. Early on, we made quick, targeted fixes to
+              address the most glaring inconsistencies while evaluating how deep
+              the redesign needed to go. We also explored a few brand directions
+              before deciding to retain COROS AI's existing colors and fonts —
+              using those explorations to inform direction rather than overhaul
+              the identity.
             </p>
 
-            {/* 5.1 — Immediate Improvements */}
+            {/* 5.1 — Design System Migration */}
             <div id="phase-1">
-              <h3>5.1 Immediate Improvements</h3>
-              <p>
-                We began by making targeted improvements to the existing design
-                — tightening spacing, addressing the most glaring
-                inconsistencies, and clarifying feedback states. This gave the
-                team quick wins while we evaluated the scope of what a deeper
-                redesign would require.
-              </p>
-            </div>
-
-            {/* 5.2 — Brand Exploration */}
-            <div id="phase-2">
-              <h3>5.2 Brand Exploration</h3>
-              <p>
-                As it became clear that the product needed more than surface
-                fixes, I prototyped and ideated on a fuller brand redesign
-                direction. The explorations pushed toward a more premium
-                aesthetic — stripping back decorative color usage, locking down
-                a consistent spacing system, and elevating the overall visual
-                language to better match the credibility COROS AI needed to
-                convey.
-              </p>
-              <div className="cs-ba">
-                <div className="cs-ba-direction">
-                  <span className="cs-ba-label">Direction A</span>
-                  <div
-                    className="cs-ba-img"
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Click to enlarge"
-                    onClick={openLightbox}
-                    onKeyDown={openLightbox}
-                  >
-                    <img
-                      src="/img/case-studies/coros-ai/brand-exploration-a-desktop.png"
-                      alt="Brand exploration direction A — desktop"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-                <div className="cs-ba-direction">
-                  <span className="cs-ba-label">Direction B</span>
-                  <div
-                    className="cs-ba-img"
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Click to enlarge"
-                    onClick={openLightbox}
-                    onKeyDown={openLightbox}
-                  >
-                    <img
-                      src="/img/case-studies/coros-ai/brand-exploration-b-mobile.png"
-                      alt="Brand exploration direction B — mobile screens"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div
-                    className="cs-ba-img"
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Click to enlarge"
-                    onClick={openLightbox}
-                    onKeyDown={openLightbox}
-                  >
-                    <img
-                      src="/img/case-studies/coros-ai/brand-exploration-b-desktop-1.png"
-                      alt="Brand exploration direction B — desktop view 1"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div
-                    className="cs-ba-img"
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Click to enlarge"
-                    onClick={openLightbox}
-                    onKeyDown={openLightbox}
-                  >
-                    <img
-                      src="/img/case-studies/coros-ai/brand-exploration-b-desktop-2.png"
-                      alt="Brand exploration direction B — desktop view 2"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </div>
-              <p>
-                Ultimately, the team decided to retain the existing brand colors
-                and fonts — using these explorations to inform direction rather
-                than overhaul the identity.
-              </p>
-            </div>
-
-            {/* 5.3 — Design System Migration */}
-            <div id="phase-3">
-              <h3>5.3 Design System Migration</h3>
+              <h3>5.1 Design System Migration</h3>
               <h4 className="cs-paragraph-heading">Why shadcn over MUI</h4>
               <p>
                 The decision came down to two factors. First, the version of MUI
@@ -642,85 +468,34 @@ export default function CorosAI() {
               </p>
             </div>
 
-            {/* 5.4 — Redesign */}
-            <div id="phase-4">
-              <h3>5.4 Redesign</h3>
+            {/* 5.2 — Redesign */}
+            <div id="phase-2">
+              <h3>5.2 Redesign</h3>
               <p>
                 Working in Figma, I went directly to hi-fi design rather than
                 wireframing — grounded in the constraints and patterns already
-                established by the new design system. Key screens included
-                settings pages and onboarding.
-              </p>
-              <p>
-                One decision I made was replacing the personality selector
-                slider with a toggle. The original slider implied a spectrum,
-                but the interaction is actually binary — users choose between
-                Supportive or Provocative. A toggle accurately represents that
-                mental model. Small change, meaningful reason.
+                established by the new design system. Onboarding was
+                restructured for clearer visual hierarchy, so primary actions,
+                supporting text, and structure each carried distinct visual
+                weight instead of competing equally for attention.
               </p>
 
-              <div className="cs-ba-direction">
-                <span className="cs-ba-label">Personality — Onboarding</span>
-                <div className="cs-ba">
-                  <div className="cs-ba-grid">
-                    <div className="cs-ba-col">
-                      <span className="cs-ba-label">Before</span>
-                      <div
-                        className="cs-ba-img"
-                        role="button"
-                        tabIndex={0}
-                        aria-label="Click to enlarge"
-                        onClick={openLightbox}
-                        onKeyDown={openLightbox}
-                      >
-                        <img
-                          src="/img/case-studies/coros-ai/personality-before.png"
-                          alt="Personality selector before redesign — slider"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                    </div>
-                    <div className="cs-ba-col">
-                      <span className="cs-ba-label">After</span>
-                      <div
-                        className="cs-ba-img"
-                        role="button"
-                        tabIndex={0}
-                        aria-label="Click to enlarge"
-                        onClick={openLightbox}
-                        onKeyDown={openLightbox}
-                      >
-                        <img
-                          src="/img/case-studies/coros-ai/personality-after.png"
-                          alt="Personality selector after redesign — toggle"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p>
-                The screen also received broader spacing and typographic
-                improvements — larger text, more breathing room between
-                elements, and descriptor labels to help users understand what
-                each option actually means.
-              </p>
-            </div>
-
-            {/* 5.5 — Engineering Handoff */}
-            <div id="phase-5">
-              <h3>5.5 Engineering Handoff</h3>
-              <p>
-                Handoff was collaborative and ongoing — a mix of meetings and
-                back-and-forth with the engineering team. A key part of my role
-                was walking engineers through Figma Dev Mode so they could pull
-                values directly from the design file rather than eyeballing or
-                hardcoding. The goal was to make the design system the single
-                source of truth for both teams.
-              </p>
+              <BeforeAfterToggle
+                label="Settings"
+                beforeSrc="/img/case-studies/coros-ai/personalization-menu-before.png"
+                afterSrc="/img/case-studies/coros-ai/settings-after.png"
+                beforeAlt="Settings before redesign"
+                afterAlt="Settings after redesign"
+                onImageClick={(src) => setLightbox(src)}
+              />
+              <BeforeAfterToggle
+                label="Chat"
+                beforeSrc="/img/case-studies/coros-ai/chat-before.png"
+                afterSrc="/img/case-studies/coros-ai/chat-after.png"
+                beforeAlt="Settings before redesign"
+                afterAlt="Settings after redesign"
+                onImageClick={(src) => setLightbox(src)}
+              />
             </div>
           </section>
 
@@ -744,6 +519,10 @@ export default function CorosAI() {
               eliminated the hardcoding issues that had caused inconsistencies
               in the first place. The product now has a design system that both
               teams can actually work from.
+            </p>
+            <p>
+              This system has since shipped to production and is now the
+              foundation both design and engineering build on for new features.
             </p>
           </section>
 
