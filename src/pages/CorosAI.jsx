@@ -248,16 +248,12 @@ export default function CorosAI() {
               COROS AI is an AI coaching platform that helps high-performing
               professionals navigate the human side of work — building trust,
               managing high-stakes conversations, and developing interpersonal
-              skills that AI can't replace. The platform needed a full UI/UX
-              redesign to modernize the experience and address underlying design
-              system inconsistencies that were undermining the product's
-              credibility.
+              skills that AI can't replace.
             </p>
             <p>
-              The interface had grown organically alongside the product, and by
-              late 2025 it showed — the UI felt dated and inconsistent, and
-              didn't reflect the quality of the coaching experience underneath
-              it. The team knew a redesign was overdue.
+              The platform needed a full UI/UX redesign to modernize the
+              experience and address underlying design system inconsistencies
+              that were undermining the product's credibility.
             </p>
             <p>
               I worked alongside a design lead as a product and UI/UX designer,
@@ -363,6 +359,10 @@ export default function CorosAI() {
               Inconsistent UI was undermining a product built around trust.
             </h2>
             <p>
+              To understand the scope of the problem, I conducted a product
+              audit and synthesized existing user feedback shared by the team.
+            </p>
+            <p>
               The existing COROS AI interface had two compounding problems. On
               the surface, the UI felt inconsistent and unpolished — color was
               used decoratively rather than functionally, meaning some elements
@@ -442,29 +442,26 @@ export default function CorosAI() {
               Two phases, from quick assessment to full redesign.
             </h2>
             <p>
-              The redesign unfolded in phases rather than a clean linear process
-              — which reflected the reality of working on a live product with
-              evolving priorities. Early on, we made quick, targeted fixes to
-              address the most glaring inconsistencies while evaluating how deep
-              the redesign needed to go. We also explored a few brand directions
-              before deciding to retain COROS AI's existing colors and fonts —
-              using those explorations to inform direction rather than overhaul
-              the identity.
+              Early on, we made quick, targeted fixes to address the most
+              glaring inconsistencies while evaluating how deep the redesign
+              needed to go. We also explored a few brand directions before
+              deciding to retain COROS AI's existing colors and fonts — using
+              those explorations to inform direction rather than overhaul the
+              identity.
             </p>
 
             {/* 5.1 — Design System Migration */}
             <div id="phase-1">
               <h3>5.1 Design System Migration</h3>
-              <h4 className="cs-paragraph-heading">Why shadcn over MUI</h4>
               <p>
-                The decision came down to two factors. First, the version of MUI
-                in use was heavily pre-styled — engineers were constantly
-                overriding default styles to match designs, which was the root
-                cause of the hardcoding problem. Second, shadcn offered sensible
-                defaults with more flexibility, making it easier for engineers
-                to implement designs accurately without fighting the component
-                system. The goal was a single source of truth that both
-                designers and engineers could actually work from.
+                With brand direction confirmed, we migrated from MUI to shadcn.
+                The existing MUI implementation was outdated and heavily
+                pre-styled, which had been causing engineers to constantly
+                override defaults — the root cause of the hardcoding problem.
+                Shadcn offered sensible defaults with greater flexibility,
+                giving us a foundation we could actually build consistently on.
+                I redefined the color token structure, built new components, and
+                established both light and dark mode across the system.
               </p>
             </div>
 
@@ -477,7 +474,10 @@ export default function CorosAI() {
                 established by the new design system. Onboarding was
                 restructured for clearer visual hierarchy, so primary actions,
                 supporting text, and structure each carried distinct visual
-                weight instead of competing equally for attention.
+                weight instead of competing equally for attention. Settings and
+                chat followed the same logic, applying the new system
+                consistently across both to bring them in line with the rest of
+                the redesign.
               </p>
 
               <BeforeAfterToggle
@@ -517,12 +517,13 @@ export default function CorosAI() {
               foundation for COROS AI — clearer feedback states, a unified
               component system, and a design-to-engineering workflow that
               eliminated the hardcoding issues that had caused inconsistencies
-              in the first place. The product now has a design system that both
-              teams can actually work from.
+              in the first place.
             </p>
             <p>
               This system has since shipped to production and is now the
-              foundation both design and engineering build on for new features.
+              foundation both design and engineering build on for new features,
+              including My World — a feature I designed end-to-end, from
+              architecture through handoff.
             </p>
           </section>
 
